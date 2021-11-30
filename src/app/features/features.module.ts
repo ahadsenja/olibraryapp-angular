@@ -8,6 +8,9 @@ import { PublisherUpdateComponent } from './publisher/publisher-update/publisher
 import { CategoryListComponent } from './category/category-list/category-list.component';
 import { CategoryCreateComponent } from './category/category-create/category-create.component';
 import { CategoryUpdateComponent } from './category/category-update/category-update.component';
+import { GenreListComponent } from './genre/genre-list/genre-list.component';
+import { GenreCreateComponent } from './genre/genre-create/genre-create.component';
+import { GenreUpdateComponent } from './genre/genre-update/genre-update.component';
 
 
 @NgModule({
@@ -17,7 +20,10 @@ import { CategoryUpdateComponent } from './category/category-update/category-upd
     PublisherUpdateComponent,
     CategoryListComponent,
     CategoryCreateComponent,
-    CategoryUpdateComponent
+    CategoryUpdateComponent,
+    GenreListComponent,
+    GenreCreateComponent,
+    GenreUpdateComponent
   ],
   imports: [
     CommonModule,
