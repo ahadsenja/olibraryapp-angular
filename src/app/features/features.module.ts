@@ -11,6 +11,9 @@ import { CategoryUpdateComponent } from './category/category-update/category-upd
 import { GenreListComponent } from './genre/genre-list/genre-list.component';
 import { GenreCreateComponent } from './genre/genre-create/genre-create.component';
 import { GenreUpdateComponent } from './genre/genre-update/genre-update.component';
+import { BookListComponent } from './book/book-list/book-list.component';
+import { BookCreateComponent } from './book/book-create/book-create.component';
+import { BookUpdateComponent } from './book/book-update/book-update.component';
 
 
 @NgModule({
@@ -23,7 +26,10 @@ import { GenreUpdateComponent } from './genre/genre-update/genre-update.componen
     CategoryUpdateComponent,
     GenreListComponent,
     GenreCreateComponent,
-    GenreUpdateComponent
+    GenreUpdateComponent,
+    BookListComponent,
+    BookCreateComponent,
+    BookUpdateComponent
   ],
   imports: [
     CommonModule,
