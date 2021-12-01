@@ -73,6 +73,30 @@ export const routes: Routes = [
       {
         path: 'publishers',
         loadChildren: () => import('./features/publisher/publisher.module').then(m => m.PublisherModule)
+      },
+      {
+        path: 'borrows',
+        loadChildren: () => import('./features/borrow/borrow.module').then(m => m.BorrowModule)
+      },
+      {
+        path: 'bookreturns',
+        loadChildren: () => import('./features/bookreturn/bookreturn.module').then(m => m.BookreturnModule)
+      },
+      {
+        path: 'charges',
+        loadChildren: () => import('./features/charge/charge.module').then(m => m.ChargeModule)
+      },
+      {
+        path: 'customers',
+        loadChildren: () => import('./features/customer/customer.module').then(m => m.CustomerModule)
+      },
+      {
+        path: 'operators',
+        loadChildren: () => import('./features/operator/operator.module').then(m => m.OperatorModule)
+      },
+      {
+        path: 'settings',
+        loadChildren: () => import('./features/setting/setting.module').then(m => m.SettingModule)
       }
     ]
     // children: [
