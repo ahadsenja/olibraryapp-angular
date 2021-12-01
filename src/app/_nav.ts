@@ -13,31 +13,31 @@ export const navItems: INavData[] = [
 
   {
     title: true,
-    name: 'Books'
+    name: 'Library'
   },
   {
     name: 'Books',
-    url: '/books',
+    url: '/books/books',
     icon: 'cil-book'
   },
   {
     name: 'Categories',
-    url: '/categories',
+    url: '/categories/categories',
     icon: 'cil-bookmark'
   },
   {
     name: 'Genres',
-    url: '/genres',
+    url: '/genres/genres',
     icon: 'cil-blur-linear'
   },
   {
     name: 'Authors',
-    url: '/authors',
+    url: '/authors/authors',
     icon: 'cil-user'
   },
   {
     name: 'Publishers',
-    url: '/publishers',
+    url: '/publishers/publishers',
     icon: 'cil-library'
   },
 
