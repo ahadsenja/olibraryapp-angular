@@ -51,44 +51,70 @@ export const routes: Routes = [
     },
     children: [
       {
-        path: 'base',
-        loadChildren: () => import('./views/base/base.module').then(m => m.BaseModule)
-      },
-      {
-        path: 'buttons',
-        loadChildren: () => import('./views/buttons/buttons.module').then(m => m.ButtonsModule)
-      },
-      {
-        path: 'charts',
-        loadChildren: () => import('./views/chartjs/chartjs.module').then(m => m.ChartJSModule)
-      },
-      {
         path: 'dashboard',
         loadChildren: () => import('./views/dashboard/dashboard.module').then(m => m.DashboardModule)
       },
       {
-        path: 'icons',
-        loadChildren: () => import('./views/icons/icons.module').then(m => m.IconsModule)
+        path: 'books',
+        loadChildren: () => import('./features/book/book.module').then(m => m.BookModule)
       },
       {
-        path: 'notifications',
-        loadChildren: () => import('./views/notifications/notifications.module').then(m => m.NotificationsModule)
+        path: 'categories',
+        loadChildren: () => import('./features/category/category.module').then(m => m.CategoryModule)
       },
       {
-        path: 'theme',
-        loadChildren: () => import('./views/theme/theme.module').then(m => m.ThemeModule)
+        path: 'genres',
+        loadChildren: () => import('./features/genre/genre.module').then(m => m.GenreModule)
       },
       {
-        path: 'widgets',
-        loadChildren: () => import('./views/widgets/widgets.module').then(m => m.WidgetsModule)
+        path: 'authors',
+        loadChildren: () => import('./features/author/author.module').then(m => m.AuthorModule)
+      },
+      {
+        path: 'publishers',
+        loadChildren: () => import('./features/publisher/publisher.module').then(m => m.PublisherModule)
       }
     ]
+    // children: [
+    //   {
+    //     path: 'base',
+    //     loadChildren: () => import('./views/base/base.module').then(m => m.BaseModule)
+    //   },
+    //   {
+    //     path: 'buttons',
+    //     loadChildren: () => import('./views/buttons/buttons.module').then(m => m.ButtonsModule)
+    //   },
+    //   {
+    //     path: 'charts',
+    //     loadChildren: () => import('./views/chartjs/chartjs.module').then(m => m.ChartJSModule)
+    //   },
+    //   {
+    //     path: 'dashboard',
+    //     loadChildren: () => import('./views/dashboard/dashboard.module').then(m => m.DashboardModule)
+    //   },
+    //   {
+    //     path: 'icons',
+    //     loadChildren: () => import('./views/icons/icons.module').then(m => m.IconsModule)
+    //   },
+    //   {
+    //     path: 'notifications',
+    //     loadChildren: () => import('./views/notifications/notifications.module').then(m => m.NotificationsModule)
+    //   },
+    //   {
+    //     path: 'theme',
+    //     loadChildren: () => import('./views/theme/theme.module').then(m => m.ThemeModule)
+    //   },
+    //   {
+    //     path: 'widgets',
+    //     loadChildren: () => import('./views/widgets/widgets.module').then(m => m.WidgetsModule)
+    //   }
+    // ]
   },
   { path: '**', component: P404Component }
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }) ],
-  exports: [ RouterModule ]
+  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
+  exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
