@@ -10,7 +10,6 @@ export const navItems: INavData[] = [
       text: 'NEW'
     }
   },
-
   {
     title: true,
     name: 'Library'
@@ -47,17 +46,17 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Borrowing',
-    url: '/borrowing',
+    url: '/borrows/borrows',
     icon: 'cil-mouse'
   },
   {
     name: 'Book Return',
-    url: '/bookreturn',
+    url: '/bookreturns/bookreturns',
     icon: 'cil-sync'
   },
   {
     name: 'Charge',
-    url: '/charge',
+    url: '/charges/charges',
     icon: 'cil-money'
   },
 
@@ -67,12 +66,12 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Customers',
-    url: '/customers',
+    url: '/customers/customers',
     icon: 'cil-people'
   },
   {
     name: 'Operator',
-    url: '/operators',
+    url: '/operators/operators',
     icon: 'cil-user-female'
   },
 
@@ -81,8 +80,8 @@ export const navItems: INavData[] = [
     name: 'Settings'
   },
   {
-    name: 'Setting',
-    url: '/setting',
+    name: 'Settings',
+    url: '/settings/settings',
     icon: 'cil-settings'
   },
   // {
