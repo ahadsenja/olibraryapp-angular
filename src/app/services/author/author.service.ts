@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { Api } from '../../core/constants/api';
-import { Author } from '../../shared/models/author';
+import { Author } from '../../shared/models/author/author';
 
 @Injectable({
   providedIn: 'root'
