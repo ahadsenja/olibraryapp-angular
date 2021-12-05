@@ -20,7 +20,6 @@ export class AuthorListComponent implements OnInit {
   onGetAuthors(): void {
     this.authorService.getAll().subscribe(data => {
       this.authors = data.data
-      console.log(this.authors);
     })
   }
 
