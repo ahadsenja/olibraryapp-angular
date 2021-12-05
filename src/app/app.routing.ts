@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 // Import Containers
 import { DefaultLayoutComponent } from './containers';
+import { AuthGuard } from './core/guard/auth.guard';
+import { DashboardComponent } from './views/dashboard/dashboard.component';
 
 import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
@@ -13,7 +15,12 @@ export const routes: Routes = [
   {
     path: '',
     redirectTo: 'dashboard',
-    pathMatch: 'full',
+    pathMatch: 'full'
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: '404',
@@ -52,51 +59,63 @@ export const routes: Routes = [
     children: [
       {
         path: 'dashboard',
-        loadChildren: () => import('./views/dashboard/dashboard.module').then(m => m.DashboardModule)
+        loadChildren: () => import('./views/dashboard/dashboard.module').then(m => m.DashboardModule),
+        canActivate: [AuthGuard]
       },
       {
         path: 'books',
-        loadChildren: () => import('./features/book/book.module').then(m => m.BookModule)
+        loadChildren: () => import('./features/book/book.module').then(m => m.BookModule),
+        canActivate: [AuthGuard]
       },
       {
         path: 'categories',
-        loadChildren: () => import('./features/category/category.module').then(m => m.CategoryModule)
+        loadChildren: () => import('./features/category/category.module').then(m => m.CategoryModule),
+        canActivate: [AuthGuard]
       },
       {
         path: 'genres',
-        loadChildren: () => import('./features/genre/genre.module').then(m => m.GenreModule)
+        loadChildren: () => import('./features/genre/genre.module').then(m => m.GenreModule),
+        canActivate: [AuthGuard]
       },
       {
         path: 'authors',
-        loadChildren: () => import('./features/author/author.module').then(m => m.AuthorModule)
+        loadChildren: () => import('./features/author/author.module').then(m => m.AuthorModule),
+        canActivate: [AuthGuard]
       },
       {
         path: 'publishers',
-        loadChildren: () => import('./features/publisher/publisher.module').then(m => m.PublisherModule)
+        loadChildren: () => import('./features/publisher/publisher.module').then(m => m.PublisherModule),
+        canActivate: [AuthGuard]
       },
       {
         path: 'borrows',
-        loadChildren: () => import('./features/borrow/borrow.module').then(m => m.BorrowModule)
+        loadChildren: () => import('./features/borrow/borrow.module').then(m => m.BorrowModule),
+        canActivate: [AuthGuard]
       },
       {
         path: 'bookreturns',
-        loadChildren: () => import('./features/bookreturn/bookreturn.module').then(m => m.BookreturnModule)
+        loadChildren: () => import('./features/bookreturn/bookreturn.module').then(m => m.BookreturnModule),
+        canActivate: [AuthGuard]
       },
       {
         path: 'charges',
-        loadChildren: () => import('./features/charge/charge.module').then(m => m.ChargeModule)
+        loadChildren: () => import('./features/charge/charge.module').then(m => m.ChargeModule),
+        canActivate: [AuthGuard]
       },
       {
         path: 'customers',
-        loadChildren: () => import('./features/customer/customer.module').then(m => m.CustomerModule)
+        loadChildren: () => import('./features/customer/customer.module').then(m => m.CustomerModule),
+        canActivate: [AuthGuard]
       },
       {
         path: 'operators',
-        loadChildren: () => import('./features/operator/operator.module').then(m => m.OperatorModule)
+        loadChildren: () => import('./features/operator/operator.module').then(m => m.OperatorModule),
+        canActivate: [AuthGuard]
       },
       {
         path: 'settings',
-        loadChildren: () => import('./features/setting/setting.module').then(m => m.SettingModule)
+        loadChildren: () => import('./features/setting/setting.module').then(m => m.SettingModule),
+        canActivate: [AuthGuard]
       }
     ]
     // children: [
