@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PublihserService } from '../../../services/publisher/publihser.service';
+import { Publihser } from '../../../shared/models/publisher/publihser';
 
 @Component({
   selector: 'app-publisher-list',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PublisherListComponent implements OnInit {
 
-  constructor() { }
+  publishers: Publihser[] = [];
+
+  constructor(private publisherService: PublihserService) { }
 
   ngOnInit(): void {
+    this.onGetPublishers();
+  }
+
+  onGetPublishers(): void {
+    this.publisherService.getAll().subscribe(data => {
+      this.publishers = data.data;
+    })
   }
 
 }
