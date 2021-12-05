@@ -13,7 +13,8 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'bookreturns'
+        redirectTo: 'bookreturns',
+        pathMatch: 'full'
       },
       {
         path: 'bookreturns',
