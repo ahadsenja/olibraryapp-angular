@@ -13,7 +13,8 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'categories'
+        redirectTo: 'categories',
+        pathMatch: 'full'
       },
       {
         path: 'categories',
