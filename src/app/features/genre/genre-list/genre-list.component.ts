@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GenreService } from '../../../services/genre/genre.service';
+import { Genre } from '../../../shared/models/genre/genre';
 
 @Component({
   selector: 'app-genre-list',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GenreListComponent implements OnInit {
 
-  constructor() { }
+  genres: Genre[] = [];
+
+  constructor(private genreService: GenreService) { }
 
   ngOnInit(): void {
+    this.onGetGenres();
+  }
+
+  onGetGenres(): void {
+    this.genreService.getAll().subscribe(data => {
+      this.genres = data.data;
+    });
   }
 
 }
