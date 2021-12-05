@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -12,6 +14,20 @@ import { IconModule, IconSetModule, IconSetService } from '@coreui/icons-angular
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
+
+import { CoreModule } from './core/core.module';
+
+import { AuthorModule } from './features/author/author.module';
+import { BookModule } from './features/book/book.module';
+import { BookreturnModule } from './features/bookreturn/bookreturn.module';
+import { BorrowModule } from './features/borrow/borrow.module';
+import { CategoryModule } from './features/category/category.module';
+import { ChargeModule } from './features/charge/charge.module';
+import { CustomerModule } from './features/customer/customer.module';
+import { GenreModule } from './features/genre/genre.module';
+import { OperatorModule } from './features/operator/operator.module';
+import { PublisherModule } from './features/publisher/publisher.module';
+import { SettingModule } from './features/setting/setting.module';
 
 import { AppComponent } from './app.component';
 
@@ -48,6 +64,8 @@ import { ChartsModule } from 'ng2-charts';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
     AppAsideModule,
     AppBreadcrumbModule.forRoot(),
     AppFooterModule,
@@ -59,6 +77,20 @@ import { ChartsModule } from 'ng2-charts';
     ChartsModule,
     IconModule,
     IconSetModule.forRoot(),
+
+    CoreModule,
+
+    AuthorModule,
+    BookModule,
+    BookreturnModule,
+    BorrowModule,
+    CategoryModule,
+    ChargeModule,
+    CustomerModule,
+    GenreModule,
+    OperatorModule,
+    PublisherModule,
+    SettingModule
   ],
   declarations: [
     AppComponent,
