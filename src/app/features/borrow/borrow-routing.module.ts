@@ -13,7 +13,8 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'borrows'
+        redirectTo: 'borrows',
+        pathMatch: 'full'
       },
       {
         path: 'borrows',
