@@ -6,6 +6,17 @@
           <i class="fa fa-align-justify"></i> Publishers Data
         </div>
         <div class="card-body">
+          <div class="action">
+            <a routerLink="/publishers/publisher-create" type="button" class="btn btn-info">
+              <i class="fa fa-plus"></i> New Publisher
+            </a>
+
+            <form action="" class="search">
+              <i class="fa fa-search"></i>
+              <input type="search" class="form-control" placeholder="Search">
+            </form>
+          </div>
+
           <table class="table table-hover">
             <thead>
               <tr>
@@ -24,14 +35,15 @@
                 <td>{{ publisher.city }}</td>
                 <td>{{ publisher.address }}</td>
                 <td>
-                  <a href="#" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Details">
+                  <a type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Details">
                     <i class="fa fa-eye"></i>
                   </a>
-                  <a href="#" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Edit">
+                  <a type="button" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Edit"
+                    (click)="onSelectedPublisher(publisher.id)">
                     <i class="fa fa-pencil"></i>
                   </a>
-                  <a href="#" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete">
-                    <i class="fa fa-trash"></i>
+                  <a type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete">
+                    <i class="fa fa-trash" (click)="onDeletePublisher(publisher)"></i>
                   </a>
                 </td>
               </tr>
