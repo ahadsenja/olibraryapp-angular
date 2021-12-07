@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { OperatorService } from '../../../services/operator/operator.service';
+import { Operator } from '../../../shared/models/operator/operator';
 
 @Component({
   selector: 'app-operator-list',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OperatorListComponent implements OnInit {
 
-  constructor() { }
+  operators: Operator[] = [];
+
+  constructor(private operatorService: OperatorService) { }
 
   ngOnInit(): void {
+    this.onGetOperators();
+  }
+
+  onGetOperators(): void {
+    this.operatorService.getAll().subscribe(data => {
+      this.operators = data.data;
+      console.log(this.operators);
+    });
   }
 
 }
