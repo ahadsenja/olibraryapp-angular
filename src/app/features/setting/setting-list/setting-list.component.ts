@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SettingService } from '../../../services/setting/setting.service';
+import { Setting } from '../../../shared/models/setting/setting';
 
 @Component({
   selector: 'app-setting-list',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SettingListComponent implements OnInit {
 
-  constructor() { }
+  settings: Setting[] = [];
+
+  constructor(private settingService: SettingService) { }
 
   ngOnInit(): void {
+    this.onGetSettings();
+  }
+
+  onGetSettings(): void {
+    this.settingService.getAll().subscribe(data => {
+      this.settings = data.data;
+      console.log(this.settings);
+    })
   }
 
 }
