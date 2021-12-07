@@ -1,0 +1,27 @@
+.publisher-create {
+  .card {
+    .header-text {
+      padding: 30px 0 0 18px;
+
+      h4 {
+        font-weight: 700;
+      }
+    }
+
+    .card-body {
+      form {
+        .col-12 {
+          padding-top: 20px;
+        }
+
+        .btn-action {
+          margin: 30px 0 0 16px;
+
+          .btn.btn-info {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
