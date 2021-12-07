@@ -11,8 +11,29 @@ export class BorrowService {
 
   constructor(private http: HttpClient) { }
 
+  // GET ALL BORROWS
   getAll(): Observable<any> {
     return this.http.get<Borrow[]>(Api.BORROWS_URL);
+  }
+
+  // ADD NEW BORROW
+  create(borrow: Borrow): Observable<Borrow> {
+    return this.http.post<Borrow>(Api.BORROWS_URL, borrow);
+  }
+
+  // UPDATE EXISTING BORROW
+  update(id: number, borrow: Borrow): Observable<Object> {
+    return this.http.put<Borrow>(`${Api.BORROWS_URL}/${id}`, borrow);
+  }
+
+  // DELETE BORROW
+  delete(borrow: Borrow): Observable<Borrow> {
+    return this.http.delete<Borrow>(`${Api.BORROWS_URL}/${borrow.id}`);
+  }
+
+  // GET BORROW BY ID
+  getById(id: number): Observable<any> {
+    return this.http.get<Borrow[]>(`${Api.BORROWS_URL}/${id}`);
   }
 
 }
