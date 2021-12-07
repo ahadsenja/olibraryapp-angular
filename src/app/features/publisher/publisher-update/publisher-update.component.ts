@@ -30,7 +30,7 @@ export class PublisherUpdateComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.params.id;
-    this.publisherService.getCurrentPublisher(id).subscribe((res) => {
+    this.publisherService.getById(id).subscribe((res) => {
       this.formGroup = new FormGroup({
         name: new FormControl(res.data.name),
         city: new FormControl(res.data.city),
