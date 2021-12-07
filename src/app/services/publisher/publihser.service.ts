@@ -15,4 +15,20 @@ export class PublihserService {
     return this.http.get<Publihser[]>(Api.PUBLISHERS_URL);
   }
 
+  create(publisher: Publihser): Observable<Publihser> {
+    return this.http.post<Publihser>(Api.PUBLISHERS_URL, publisher);
+  }
+
+  update(id: number, publisher: Publihser): Observable<Object> {
+    return this.http.put<Publihser>(`${Api.PUBLISHERS_URL}/${id}`, publisher);
+  }
+
+  delete(publisher: Publihser): Observable<Publihser> {
+    return this.http.delete<Publihser>(`${Api.PUBLISHERS_URL}/${publisher.id}`);
+  }
+
+  getCurrentPublisher(id: number): Observable<any> {
+    return this.http.get<Publihser[]>(`${Api.PUBLISHERS_URL}/${id}`);
+  }
+
 }
