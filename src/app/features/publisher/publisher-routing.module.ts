@@ -31,7 +31,7 @@ const routes: Routes = [
         }
       },
       {
-        path: 'publisher-update',
+        path: 'publisher-update/:id',
         component: PublisherUpdateComponent,
         data: {
           title: 'publisher-update'
