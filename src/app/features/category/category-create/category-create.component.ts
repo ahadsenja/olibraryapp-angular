@@ -25,8 +25,8 @@ export class CategoryCreateComponent implements OnInit {
 
   ngOnInit(): void {
     this.formGroup = this.formBuilder.group({
-      name: new FormControl(''),
-      description: new FormControl('')
+      name: [''],
+      description: ['']
     });
   }
 
