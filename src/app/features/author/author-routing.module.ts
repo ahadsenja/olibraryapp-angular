@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { AuthorCreateComponent } from './author-create/author-create.component';
 import { AuthorListComponent } from './author-list/author-list.component';
 import { AuthorUpdateComponent } from './author-update/author-update.component';
@@ -31,7 +32,7 @@ const routes: Routes = [
         }
       },
       {
-        path: 'author-update',
+        path: 'author-update/:id',
         component: AuthorUpdateComponent,
         data: {
           title: 'author-update'
