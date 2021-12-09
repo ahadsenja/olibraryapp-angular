@@ -37,13 +37,15 @@
                 <td>{{ operator.address }}</td>
                 <td>{{ operator.handphone }}</td>
                 <td>
-                  <a href="#" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Details">
+                  <a type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Details">
                     <i class="fa fa-eye"></i>
                   </a>
-                  <a href="#" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Edit">
+                  <a type="button" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Edit"
+                    (click)="onSelectOperator(operator.id)">
                     <i class="fa fa-pencil"></i>
                   </a>
-                  <a href="#" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete">
+                  <a type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete"
+                    (click)="onDeleteOperator(operator)">
                     <i class="fa fa-trash"></i>
                   </a>
                 </td>
