@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { GenreCreateComponent } from './genre-create/genre-create.component';
 import { GenreListComponent } from './genre-list/genre-list.component';
 import { GenreUpdateComponent } from './genre-update/genre-update.component';
@@ -27,14 +28,14 @@ const routes: Routes = [
         path: 'genre-create',
         component: GenreCreateComponent,
         data: {
-          title: 'genre-create'
+          title: 'Create New Genre'
         }
       },
       {
-        path: 'genre-update',
+        path: 'genre-update/:id',
         component: GenreUpdateComponent,
         data: {
-          title: 'genre-update'
+          title: 'Update Selected Genre'
         }
       }
     ]
