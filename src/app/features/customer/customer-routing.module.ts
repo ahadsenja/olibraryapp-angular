@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { CustomerCreateComponent } from './customer-create/customer-create.component';
 import { CustomerListComponent } from './customer-list/customer-list.component';
 import { CustomerUpdateComponent } from './customer-update/customer-update.component';
@@ -20,21 +21,21 @@ const routes: Routes = [
         path: 'customers',
         component: CustomerListComponent,
         data: {
-          title: 'customers'
+          title: 'Customers'
         }
       },
       {
         path: 'customer-create',
         component: CustomerCreateComponent,
         data: {
-          title: 'customer-create'
+          title: 'Create New Customer'
         }
       },
       {
-        path: 'customer-update',
+        path: 'customer-update/:id',
         component: CustomerUpdateComponent,
         data: {
-          title: 'customer-update'
+          title: 'Update Selected Customer'
         }
       }
     ]
