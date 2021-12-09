@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { OperatorCreateComponent } from './operator-create/operator-create.component';
 import { OperatorListComponent } from './operator-list/operator-list.component';
+import { OperatorUpdateComponent } from './operator-update/operator-update.component';
 
 const routes: Routes = [
   {
@@ -19,21 +21,21 @@ const routes: Routes = [
         path: 'operators',
         component: OperatorListComponent,
         data: {
-          title: 'operators'
+          title: 'Operators'
         }
       },
       {
         path: 'operator-create',
         component: OperatorCreateComponent,
         data: {
-          title: 'operator-create'
+          title: 'Create New Operator'
         }
       },
       {
-        path: 'operator-update',
-        component: OperatorCreateComponent,
+        path: 'operator-update/:id',
+        component: OperatorUpdateComponent,
         data: {
-          title: 'operator-update'
+          title: 'Update Selected Operator'
         }
       }
     ]
