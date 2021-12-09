@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { BookreturnCreateComponent } from './bookreturn-create/bookreturn-create.component';
 import { BookreturnListComponent } from './bookreturn-list/bookreturn-list.component';
 import { BookreturnUpdateComponent } from './bookreturn-update/bookreturn-update.component';
@@ -20,21 +21,21 @@ const routes: Routes = [
         path: 'bookreturns',
         component: BookreturnListComponent,
         data: {
-          title: 'bookreturns'
+          title: 'Book Returns'
         }
       },
       {
         path: 'bookreturn-create',
         component: BookreturnCreateComponent,
         data: {
-          title: 'bookreturn-create'
+          title: 'Create New Book Return Data'
         }
       },
       {
         path: 'bookreturn-update',
         component: BookreturnUpdateComponent,
         data: {
-          title: 'bookreturn-update'
+          title: 'Update Selected Return'
         }
       }
     ]
