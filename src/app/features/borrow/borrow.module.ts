@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { BorrowRoutingModule } from './borrow-routing.module';
 
@@ -16,7 +17,8 @@ import { BorrowUpdateComponent } from './borrow-update/borrow-update.component';
   ],
   imports: [
     CommonModule,
-    BorrowRoutingModule
+    BorrowRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class BorrowModule { }
