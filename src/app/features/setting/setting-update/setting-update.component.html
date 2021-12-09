@@ -1,1 +1,30 @@
-<p>setting-update works!</p>
+<div class="setting-update">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="header-text">
+          <h4>Edit Existing Setting Data</h4>
+        </div>
+
+        <div class="card-body">
+          <form [formGroup]="formGroup" (ngSubmit)="onCreateAuthor()" class="row g-3">
+            <div class="col-md-6 mb-3">
+              <label for="property" class="form-label">Property</label>
+              <input type="text" name="property" class="form-control" placeholder="Property" formControlName="property">
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label for="value" class="form-label">Value</label>
+              <input type="text" name="value" class="form-control" placeholder="Value" formControlName="value">
+            </div>
+
+            <div class="btn-action">
+              <button type="submit" class="btn btn-info">Submit</button>
+              <button type="submit" class="btn btn-secondary">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
