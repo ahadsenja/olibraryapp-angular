@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { CategoryRoutingModule } from './category-routing.module';
 
@@ -16,7 +17,8 @@ import { CategoryUpdateComponent } from './category-update/category-update.compo
   ],
   imports: [
     CommonModule,
-    CategoryRoutingModule
+    CategoryRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class CategoryModule { }
