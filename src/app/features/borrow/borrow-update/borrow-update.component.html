@@ -1,1 +1,47 @@
-<p>borrow-update works!</p>
+<div class="borrow-update">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="header-text">
+          <h4>Edit Existing Borrow</h4>
+        </div>
+
+        <div class="card-body">
+          <form [formGroup]="formGroup" (ngSubmit)="onCreateAuthor()" class="row g-3">
+            <div class="col-md-6 mb-3">
+              <label for="borrow_date" class="form-label">Borrow Date</label>
+              <input type="date" name="borrow_date" class="form-control" placeholder="Borrow Date"
+                formControlName="borrow_date">
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label for="return_date" class="form-label">Return Date</label>
+              <input type="date" name="return_date" class="form-control" placeholder="Return Date"
+                formControlName="return_date">
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <label for="stock" class="form-label">Book</label>
+              <input type="text" name="stock" class="form-control" placeholder="Stock" formControlName="stock">
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <label for="category" class="form-label">Customer</label>
+              <select name="category" class="form-control" id=""></select>
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <label for="genre" class="form-label">Operator</label>
+              <select name="genre" class="form-control" id=""></select>
+            </div>
+
+            <div class="btn-action">
+              <button type="submit" class="btn btn-info">Submit</button>
+              <button type="submit" class="btn btn-secondary">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
