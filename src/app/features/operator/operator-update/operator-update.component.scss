@@ -1,0 +1,23 @@
+.operator-update {
+  .card {
+    .header-text {
+      padding: 30px 0 0 18px;
+
+      h4 {
+        font-weight: 700;
+      }
+    }
+
+    .card-body {
+      form {
+        .btn-action {
+          margin: 30px 0 0 16px;
+
+          .btn.btn-info {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

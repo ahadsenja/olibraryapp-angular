@@ -1,1 +1,52 @@
-<p>operator-create works!</p>
+<div class="operator-create">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="header-text">
+          <h4>Add New Operator</h4>
+        </div>
+
+        <div class="card-body">
+          <form [formGroup]="formGroup" (ngSubmit)="onCreateAuthor()" class="row g-3">
+            <div class="col-md-3 mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" name="name" class="form-control" placeholder="Type name" formControlName="name">
+            </div>
+
+            <div class="col-md-3 mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input type="text" name="username" class="form-control" placeholder="Username" formControlName="username">
+            </div>
+
+            <div class="col-md-3 mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" name="email" class="form-control" placeholder="Email" formControlName="email">
+            </div>
+
+            <div class="col-md-3 mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" name="password" class="form-control" placeholder="Password"
+                formControlName="password">
+            </div>
+
+            <div class="col-md-3 mb-3">
+              <label for="handphone" class="form-label">Handphone</label>
+              <input type="text" name="handphone" class="form-control" placeholder="Handphone"
+                formControlName="handphone">
+            </div>
+
+            <div class="col-md-9 mb-3">
+              <label for="address" class="form-label">Address</label>
+              <textarea name="address" id="address" class="form-control" rows="1"></textarea>
+            </div>
+
+            <div class="btn-action">
+              <button type="submit" class="btn btn-info">Submit</button>
+              <button type="submit" class="btn btn-secondary">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
