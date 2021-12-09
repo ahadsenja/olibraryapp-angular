@@ -6,6 +6,17 @@
                     <i class="fa fa-align-justify"></i> Authors Data
                 </div>
                 <div class="card-body">
+                    <div class="action">
+                        <a [routerLink]="['/authors/author-create']" type="button" class="btn btn-info">
+                            <i class="fa fa-plus"></i> New Author
+                        </a>
+
+                        <form action="" class="search">
+                            <i class="fa fa-search"></i>
+                            <input type="search" class="form-control" placeholder="Search">
+                        </form>
+                    </div>
+
                     <table class="table table-hover">
                         <thead>
                             <tr>
