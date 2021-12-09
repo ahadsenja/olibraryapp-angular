@@ -32,7 +32,7 @@ const routes: Routes = [
         }
       },
       {
-        path: 'book-update',
+        path: 'book-update/:id',
         component: BookUpdateComponent,
         data: {
           title: 'Update Selected Book'
