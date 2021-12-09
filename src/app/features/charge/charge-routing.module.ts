@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { ChargeCreateComponent } from './charge-create/charge-create.component';
 import { ChargeListComponent } from './charge-list/charge-list.component';
 import { ChargeUpdateComponent } from './charge-update/charge-update.component';
@@ -20,21 +21,21 @@ const routes: Routes = [
         path: 'charges',
         component: ChargeListComponent,
         data: {
-          title: 'charges'
+          title: 'Charges'
         }
       },
       {
         path: 'charge-create',
         component: ChargeCreateComponent,
         data: {
-          title: 'charge-create'
+          title: 'Create New Charge Data'
         }
       },
       {
-        path: 'charge-update',
+        path: 'charge-update/:id',
         component: ChargeUpdateComponent,
         data: {
-          title: 'charge-update'
+          title: 'Update Selected Charge Data'
         }
       }
     ]
