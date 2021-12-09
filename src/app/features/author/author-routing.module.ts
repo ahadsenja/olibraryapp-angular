@@ -35,7 +35,7 @@ const routes: Routes = [
         path: 'author-update/:id',
         component: AuthorUpdateComponent,
         data: {
-          title: 'Update Existing Data'
+          title: 'Update Selected Author'
         }
       }
     ]
