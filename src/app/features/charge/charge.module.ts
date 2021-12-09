@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { ChargeRoutingModule } from './charge-routing.module';
 
@@ -17,7 +18,8 @@ import { ChargeUpdateComponent } from './charge-update/charge-update.component';
   ],
   imports: [
     CommonModule,
-    ChargeRoutingModule
+    ChargeRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class ChargeModule { }
