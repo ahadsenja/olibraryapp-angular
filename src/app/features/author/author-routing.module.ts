@@ -21,21 +21,21 @@ const routes: Routes = [
         path: 'authors',
         component: AuthorListComponent,
         data: {
-          title: 'authors'
+          title: 'Authors'
         }
       },
       {
         path: 'author-create',
         component: AuthorCreateComponent,
         data: {
-          title: 'author-create'
+          title: 'Create New Author'
         }
       },
       {
         path: 'author-update/:id',
         component: AuthorUpdateComponent,
         data: {
-          title: 'author-update'
+          title: 'Update Existing Data'
         }
       }
     ]
