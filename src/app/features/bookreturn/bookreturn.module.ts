@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { BookreturnRoutingModule } from './bookreturn-routing.module';
 
@@ -16,7 +17,8 @@ import { BookreturnUpdateComponent } from './bookreturn-update/bookreturn-update
   ],
   imports: [
     CommonModule,
-    BookreturnRoutingModule
+    BookreturnRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class BookreturnModule { }
