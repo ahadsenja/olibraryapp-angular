@@ -26,12 +26,12 @@ export class OperatorCreateComponent implements OnInit {
 
   ngOnInit(): void {
     this.formGroup = this.formBuilder.group({
-      name: new FormControl(''),
-      username: new FormControl(''),
-      email: new FormControl(''),
-      password: new FormControl(''),
-      address: new FormControl(''),
-      handphone: new FormControl(0),
+      name: [''],
+      username: [''],
+      email: [''],
+      password: [''],
+      address: [''],
+      handphone: [0],
     })
   }
 
