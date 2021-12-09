@@ -1,1 +1,35 @@
-<p>charge-create works!</p>
+<div class="charge-create">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="header-text">
+          <h4>Add New Charge</h4>
+        </div>
+
+        <div class="card-body">
+          <form [formGroup]="formGroup" (ngSubmit)="onCreateAuthor()" class="row g-3">
+            <div class="col-md-4 mb-3">
+              <label for="date" class="form-label">Date</label>
+              <input type="date" name="date" class="form-control" placeholder="Date" formControlName="date">
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <label for="cost" class="form-label">Cost</label>
+              <input type="text" name="cost" class="form-control" placeholder="Cost" formControlName="cost">
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <label for="book_return" class="form-label">Book Return</label>
+              <select name="book_return" class="form-control" id=""></select>
+            </div>
+
+            <div class="btn-action">
+              <button type="submit" class="btn btn-info">Submit</button>
+              <button type="submit" class="btn btn-secondary">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
