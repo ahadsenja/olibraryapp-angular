@@ -7,7 +7,7 @@
         </div>
 
         <div class="card-body">
-          <form [formGroup]="formGroup" (ngSubmit)="onCreateAuthor()" class="row g-3">
+          <form [formGroup]="formGroup" (ngSubmit)="onUpdateCustomer()" class="row g-3">
             <div class="col-md-3 mb-3">
               <label for="name" class="form-label">Name</label>
               <input type="text" name="name" class="form-control" placeholder="Type name" formControlName="name">
@@ -31,7 +31,7 @@
 
             <div class="col-md-4 mb-3">
               <label for="born_date" class="form-label">Born Date</label>
-              <input type="date" name="date" class="form-control" placeholder="Date" formControlName="date">
+              <input type="date" name="born_date" class="form-control" placeholder="Date" formControlName="born_date">
             </div>
 
             <div class="col-md-4 mb-3">
@@ -48,7 +48,8 @@
 
             <div class="col-12 mb-3">
               <label for="address" class="form-label">Address</label>
-              <textarea name="address" id="address" class="form-control" rows="4"></textarea>
+              <textarea name="address" id="address" class="form-control" rows="4" placeholder="Address"
+                formControlName="address"></textarea>
             </div>
 
             <div class="btn-action">
