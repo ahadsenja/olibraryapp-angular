@@ -1,1 +1,55 @@
-<p>book-update works!</p>
+<div class="book-update">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="header-text">
+          <h4>Add New Book</h4>
+        </div>
+
+        <div class="card-body">
+          <form [formGroup]="formGroup" (ngSubmit)="onCreateAuthor()" class="row g-3">
+            <div class="col-md-8 mb-3">
+              <label for="title" class="form-label">Title</label>
+              <input type="text" name="title" class="form-control" placeholder="Title" formControlName="title">
+            </div>
+
+            <div class="col-md-2 mb-3">
+              <label for="year" class="form-label">Published Year</label>
+              <input type="text" name="year" class="form-control" placeholder="Year" formControlName="year">
+            </div>
+
+            <div class="col-md-2 mb-3">
+              <label for="stock" class="form-label">Stock</label>
+              <input type="text" name="stock" class="form-control" placeholder="Stock" formControlName="stock">
+            </div>
+
+            <div class="col-md-3 mb-3">
+              <label for="category" class="form-label">Category</label>
+              <select name="category" class="form-control" id=""></select>
+            </div>
+
+            <div class="col-md-3 mb-3">
+              <label for="genre" class="form-label">Genre</label>
+              <select name="genre" class="form-control" id=""></select>
+            </div>
+
+            <div class="col-md-3 mb-3">
+              <label for="author" class="form-label">Author</label>
+              <select name="author" class="form-control" id=""></select>
+            </div>
+
+            <div class="col-md-3 mb-3">
+              <label for="publisher" class="form-label">Publisher</label>
+              <select name="publisher" class="form-control" id=""></select>
+            </div>
+
+            <div class="btn-action">
+              <button type="submit" class="btn btn-info">Submit</button>
+              <button type="submit" class="btn btn-secondary">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
