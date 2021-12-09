@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { SettingCreateComponent } from './setting-create/setting-create.component';
 import { SettingListComponent } from './setting-list/setting-list.component';
 import { SettingUpdateComponent } from './setting-update/setting-update.component';
@@ -20,21 +21,21 @@ const routes: Routes = [
         path: 'settings',
         component: SettingListComponent,
         data: {
-          title: 'settings'
+          title: 'Settings'
         }
       },
       {
         path: 'setting-create',
         component: SettingCreateComponent,
         data: {
-          title: 'setting-create'
+          title: 'Create New Setting'
         }
       },
       {
-        path: 'setting-update',
+        path: 'setting-update/:id',
         component: SettingUpdateComponent,
         data: {
-          title: 'setting-update'
+          title: 'Update Existing Setting'
         }
       }
     ]
