@@ -7,7 +7,7 @@
         </div>
 
         <div class="card-body">
-          <form [formGroup]="formGroup" (ngSubmit)="onCreateAuthor()" class="row g-3">
+          <form [formGroup]="formGroup" (ngSubmit)="onCreateBook()" class="row g-3">
             <div class="col-md-8 mb-3">
               <label for="title" class="form-label">Title</label>
               <input type="text" name="title" class="form-control" placeholder="Title" formControlName="title">
@@ -24,23 +24,31 @@
             </div>
 
             <div class="col-md-3 mb-3">
-              <label for="category" class="form-label">Category</label>
-              <select name="category" class="form-control" id=""></select>
+              <select class="form-control" aria-label="Default select example">
+                <option selected>Select Author</option>
+                <option *ngFor="let author of authors" [value]="author.name">{{ author.name }}</option>
+              </select>
             </div>
 
             <div class="col-md-3 mb-3">
-              <label for="genre" class="form-label">Genre</label>
-              <select name="genre" class="form-control" id=""></select>
+              <select class="form-control" aria-label="Default select example">
+                <option selected>Select Genre</option>
+                <option *ngFor="let genre of genres" [value]="genre.name">{{ genre.name }}</option>
+              </select>
             </div>
 
             <div class="col-md-3 mb-3">
-              <label for="author" class="form-label">Author</label>
-              <select name="author" class="form-control" id=""></select>
+              <select class="form-control" aria-label="Default select example">
+                <option selected>Select Category</option>
+                <option *ngFor="let category of categories" [value]="category.name">{{ category.name }}</option>
+              </select>
             </div>
 
             <div class="col-md-3 mb-3">
-              <label for="publisher" class="form-label">Publisher</label>
-              <select name="publisher" class="form-control" id=""></select>
+              <select class="form-control" aria-label="Default select example">
+                <option selected>Select Publisher</option>
+                <option *ngFor="let publisher of publishers" [value]="publisher.name">{{ publisher.name }}</option>
+              </select>
             </div>
 
             <div class="btn-action">
