@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { CategoryCreateComponent } from './category-create/category-create.component';
 import { CategoryListComponent } from './category-list/category-list.component';
 import { CategoryUpdateComponent } from './category-update/category-update.component';
@@ -20,21 +21,21 @@ const routes: Routes = [
         path: 'categories',
         component: CategoryListComponent,
         data: {
-          title: 'categories'
+          title: 'Categories'
         }
       },
       {
         path: 'category-create',
         component: CategoryCreateComponent,
         data: {
-          title: 'category-create'
+          title: 'New Book Category'
         }
       },
       {
-        path: 'category-update',
+        path: 'category-update/:id',
         component: CategoryUpdateComponent,
         data: {
-          title: 'category-update'
+          title: 'Update Selected Category'
         }
       }
     ]
