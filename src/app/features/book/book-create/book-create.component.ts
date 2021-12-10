@@ -67,26 +67,37 @@ export class BookCreateComponent implements OnInit {
     this.book.genre_id = this.formGroup.value.genre_id;
     this.book.category_id = this.formGroup.value.category_id;
     this.book.publisher_id = this.formGroup.value.publisher_id;
+
+    this.bookService.create(this.book).subscribe(res => {
+      this.isSubmitted = true;
+    });
+
+    this.formGroup.reset();
+    this.router.navigate(['/books/books']);
   }
 
+  // SHOW AUTHOR DATA IN SELECT COMPONENT
   getAuthor() {
     this.authorService.getAll().subscribe(res => {
       this.authors = res.data;
     });
   }
 
+  // SHOW GENRE DATA IN SELECT COMPONENT
   getGenre() {
     this.genreService.getAll().subscribe(res => {
       this.genres = res.data;
     });
   }
 
+  // SHOW CATEGORY DATA IN SELECT COMPONENT
   getCategory() {
     this.categoryService.getAll().subscribe(res => {
       this.categories = res.data;
     });
   }
 
+  // SHOW PUBLISHER DATA IN SELECT COMPONENT
   getPublisher() {
     this.publisherService.getAll().subscribe(res => {
       this.publishers = res.data;
