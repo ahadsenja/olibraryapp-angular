@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { BookService } from '../../../services/book/book.service';
 import { Book } from '../../../shared/models/book/book';
 
@@ -11,7 +13,10 @@ export class BookListComponent implements OnInit {
 
   books: Book[] = [];
 
-  constructor(private bookService: BookService) { }
+  constructor(
+    private bookService: BookService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.onGetBooks();
@@ -20,6 +25,17 @@ export class BookListComponent implements OnInit {
   onGetBooks(): void {
     this.bookService.getAll().subscribe(data => {
       this.books = data.data;
+    });
+  }
+
+  onSelectBook(id: number) {
+    this.router.navigate(['/books/book-update', id]);
+  }
+
+  onDeleteBook(book: Book) {
+    this.bookService.delete(book).subscribe(res => {
+      this.books = this.books.filter(id => id !== book);
+      alert('WARNING! \n The data you choose will be deleted!');
     });
   }
 
