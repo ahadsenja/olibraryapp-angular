@@ -24,30 +24,40 @@
             </div>
 
             <div class="col-md-3 mb-3">
-              <select class="form-control" aria-label="Default select example">
+              <select class="form-control" name="author_id" aria-label="Default select example"
+                formControlName="author_id">
                 <option selected>Select Author</option>
-                <option *ngFor="let author of authors" [value]="author.name">{{ author.name }}</option>
+                <option *ngFor="let author of authors" [value]="author.id">{{
+                  author.name
+                  }}</option>
               </select>
             </div>
 
             <div class="col-md-3 mb-3">
-              <select class="form-control" aria-label="Default select example">
+              <select class="form-control" name="genre_id" aria-label="Default select example"
+                formControlName="genre_id">
                 <option selected>Select Genre</option>
-                <option *ngFor="let genre of genres" [value]="genre.name">{{ genre.name }}</option>
+                <option *ngFor="let genre of genres" [value]="genre.id">{{
+                  genre.name }}
+                </option>
               </select>
             </div>
 
             <div class="col-md-3 mb-3">
-              <select class="form-control" aria-label="Default select example">
+              <select class="form-control" name="category_id" aria-label="Default select example"
+                formControlName="category_id">
                 <option selected>Select Category</option>
-                <option *ngFor="let category of categories" [value]="category.name">{{ category.name }}</option>
+                <option *ngFor="let category of categories" [value]="category.id">{{
+                  category.name }}</option>
               </select>
             </div>
 
             <div class="col-md-3 mb-3">
-              <select class="form-control" aria-label="Default select example">
+              <select class="form-control" name="publisher_id" aria-label="Default select example"
+                formControlName="publisher_id">
                 <option selected>Select Publisher</option>
-                <option *ngFor="let publisher of publishers" [value]="publisher.name">{{ publisher.name }}</option>
+                <option *ngFor="let publisher of publishers" [value]="publisher.id">{{
+                  publisher.name }}</option>
               </select>
             </div>
 
