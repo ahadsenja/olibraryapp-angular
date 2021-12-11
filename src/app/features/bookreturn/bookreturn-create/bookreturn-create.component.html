@@ -7,25 +7,39 @@
         </div>
 
         <div class="card-body">
-          <form [formGroup]="formGroup" (ngSubmit)="onCreateAuthor()" class="row g-3">
-            <div class="col-md-6 mb-3">
+          <form [formGroup]="formGroup" (ngSubmit)="onCreateBookReturn()" class="row g-3">
+            <div class="col-md-3 mb-3">
               <label for="date" class="form-label">Date</label>
               <input type="date" name="date" class="form-control" placeholder="Date" formControlName="date">
             </div>
 
-            <div class="col-md-6 mb-3">
+            <div class="col-md-9 mb-3">
               <label for="book" class="form-label">Book</label>
-              <select name="book" class="form-control" id=""></select>
+              <select class="form-control" name="book_id" aria-label="Default select example" formControlName="book_id">
+                <option selected>Select Book</option>
+                <option *ngFor="let book of books" [value]="book.id">{{
+                  book.title }}</option>
+              </select>
             </div>
 
             <div class="col-md-6 mb-3">
               <label for="customer" class="form-label">Customer</label>
-              <select name="customer" class="form-control" id=""></select>
+              <select class="form-control" name="customer_id" aria-label="Default select example"
+                formControlName="customer_id">
+                <option selected>Select Customer</option>
+                <option *ngFor="let customer of customers" [value]="customer.id">{{
+                  customer.name }}</option>
+              </select>
             </div>
 
             <div class="col-md-6 mb-3">
               <label for="operator" class="form-label">Operator</label>
-              <select name="operator" class="form-control" id=""></select>
+              <select class="form-control" name="operator_id" aria-label="Default select example"
+                formControlName="operator_id">
+                <option selected>Select Operator</option>
+                <option *ngFor="let operator of operators" [value]="operator.id">{{
+                  operator.name }}</option>
+              </select>
             </div>
 
             <div class="btn-action">

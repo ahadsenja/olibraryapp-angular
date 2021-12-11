@@ -37,13 +37,15 @@
                 <td>{{ borrow.book.title }}</td>
                 <td>{{ borrow.customer.name }}</td>
                 <td>
-                  <a href="#" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Details">
+                  <a type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Details">
                     <i class="fa fa-eye"></i>
                   </a>
-                  <a href="#" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Edit">
+                  <a type="button" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Edit"
+                    (click)="onSelectBorrow(borrow.id)">
                     <i class="fa fa-pencil"></i>
                   </a>
-                  <a href="#" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete">
+                  <a type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete"
+                    (click)="onDeleteBorrow(borrow)">
                     <i class="fa fa-trash"></i>
                   </a>
                 </td>

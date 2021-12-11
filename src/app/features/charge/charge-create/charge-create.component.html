@@ -7,7 +7,7 @@
         </div>
 
         <div class="card-body">
-          <form [formGroup]="formGroup" (ngSubmit)="onCreateAuthor()" class="row g-3">
+          <form [formGroup]="formGroup" (ngSubmit)="onCreateCharge()" class="row g-3">
             <div class="col-md-4 mb-3">
               <label for="date" class="form-label">Date</label>
               <input type="date" name="date" class="form-control" placeholder="Date" formControlName="date">
@@ -20,7 +20,12 @@
 
             <div class="col-md-4 mb-3">
               <label for="book_return" class="form-label">Book Return</label>
-              <select name="book_return" class="form-control" id=""></select>
+              <select class="form-control" name="book_return_id" aria-label="Default select example"
+                formControlName="book_return_id">
+                <option selected>Select Book Return</option>
+                <option *ngFor="let bookreturn of bookreturns" [value]="bookreturn.id">{{
+                  bookreturn.book.title }}</option>
+              </select>
             </div>
 
             <div class="btn-action">

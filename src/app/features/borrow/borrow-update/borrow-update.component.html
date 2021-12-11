@@ -7,7 +7,7 @@
         </div>
 
         <div class="card-body">
-          <form [formGroup]="formGroup" (ngSubmit)="onCreateAuthor()" class="row g-3">
+          <form [formGroup]="formGroup" (ngSubmit)="onUpdateBorrow()" class="row g-3">
             <div class="col-md-6 mb-3">
               <label for="borrow_date" class="form-label">Borrow Date</label>
               <input type="date" name="borrow_date" class="form-control" placeholder="Borrow Date"
@@ -21,22 +21,33 @@
             </div>
 
             <div class="col-md-4 mb-3">
-              <label for="stock" class="form-label">Book</label>
-              <input type="text" name="stock" class="form-control" placeholder="Stock" formControlName="stock">
+              <select class="form-control" name="book_id" aria-label="Default select example" formControlName="book_id">
+                <option selected>Select Book</option>
+                <option *ngFor="let book of books" [value]="book.id">{{
+                  book.title }}</option>
+              </select>
             </div>
 
             <div class="col-md-4 mb-3">
-              <label for="category" class="form-label">Customer</label>
-              <select name="category" class="form-control" id=""></select>
+              <select class="form-control" name="customer_id" aria-label="Default select example"
+                formControlName="customer_id">
+                <option selected>Select Customer</option>
+                <option *ngFor="let customer of customers" [value]="customer.id">{{
+                  customer.name }}</option>
+              </select>
             </div>
 
             <div class="col-md-4 mb-3">
-              <label for="genre" class="form-label">Operator</label>
-              <select name="genre" class="form-control" id=""></select>
+              <select class="form-control" name="operator_id" aria-label="Default select example"
+                formControlName="operator_id">
+                <option selected>Select Operator</option>
+                <option *ngFor="let operator of operators" [value]="operator.id">{{
+                  operator.name }}</option>
+              </select>
             </div>
 
             <div class="btn-action">
-              <button type="submit" class="btn btn-info">Submit</button>
+              <button type="submit" class="btn btn-info">Update</button>
               <button type="submit" class="btn btn-secondary">Cancel</button>
             </div>
           </form>

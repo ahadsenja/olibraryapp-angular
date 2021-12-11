@@ -1,9 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AuthorService } from '../../../services/author/author.service';
 import { BookService } from '../../../services/book/book.service';
+import { CategoryService } from '../../../services/category/category.service';
+import { GenreService } from '../../../services/genre/genre.service';
+import { PublihserService } from '../../../services/publisher/publihser.service';
+import { Author } from '../../../shared/models/author/author';
 
 import { Book } from '../../../shared/models/book/book';
+import { Category } from '../../../shared/models/category/category';
+import { Genre } from '../../../shared/models/genre/genre';
+import { Publihser } from '../../../shared/models/publisher/publihser';
 
 @Component({
   selector: 'app-book-update',
@@ -26,10 +34,19 @@ export class BookUpdateComponent implements OnInit {
 
   book: Book = new Book();
 
+  authors: Author[] = [];
+  genres: Genre[] = [];
+  categories: Category[] = [];
+  publishers: Publihser[] = [];
+
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    private bookService: BookService
+    private bookService: BookService,
+    private authorService: AuthorService,
+    private genreService: GenreService,
+    private categoryService: CategoryService,
+    private publisherService: PublihserService
   ) { }
 
   ngOnInit(): void {
@@ -45,9 +62,12 @@ export class BookUpdateComponent implements OnInit {
         category_id: new FormControl(res.data.category_id),
         publisher_id: new FormControl(res.data.publisher_id)
       });
-
-      console.log('Log data book edit: ', res);
     });
+
+    this.getAuthor();
+    this.getGenre();
+    this.getCategory();
+    this.getPublisher();
   }
 
   onUpdateBook() {
@@ -69,6 +89,34 @@ export class BookUpdateComponent implements OnInit {
 
     this.formGroup.reset();
     this.router.navigate(['/books/books']);
+  }
+
+  // SHOW AUTHOR DATA IN SELECT COMPONENT
+  getAuthor() {
+    this.authorService.getAll().subscribe(res => {
+      this.authors = res.data;
+    });
+  }
+
+  // SHOW GENRE DATA IN SELECT COMPONENT
+  getGenre() {
+    this.genreService.getAll().subscribe(res => {
+      this.genres = res.data;
+    });
+  }
+
+  // SHOW CATEGORY DATA IN SELECT COMPONENT
+  getCategory() {
+    this.categoryService.getAll().subscribe(res => {
+      this.categories = res.data;
+    });
+  }
+
+  // SHOW PUBLISHER DATA IN SELECT COMPONENT
+  getPublisher() {
+    this.publisherService.getAll().subscribe(res => {
+      this.publishers = res.data;
+    });
   }
 
 }

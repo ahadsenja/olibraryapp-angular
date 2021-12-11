@@ -35,13 +35,15 @@
                 <td>{{ charge.cost }}</td>
                 <td>{{ charge.book_return.date }}</td>
                 <td>
-                  <a href="#" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Details">
+                  <a type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Details">
                     <i class="fa fa-eye"></i>
                   </a>
-                  <a href="#" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Edit">
+                  <a type="button" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Edit"
+                    (click)="onSelectCharge(charge.id)">
                     <i class="fa fa-pencil"></i>
                   </a>
-                  <a href="#" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete">
+                  <a type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete"
+                    (click)="onDeleteCharge(charge)">
                     <i class="fa fa-trash"></i>
                   </a>
                 </td>
