@@ -1,0 +1,60 @@
+.app-body {
+  .container {
+    .card-body {
+      form {
+        .or {
+          display: flex;
+          justify-content: center;
+          padding: 20px 0 20px 0;
+        }
+
+        .social-login {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .btn-google-signin {
+          border: 1px solid #555;
+          border-radius: 4px;
+          padding: 4px
+        }
+
+        .btn-google-signin:hover {
+          border: 1px solid #555;
+          border-radius: 4px;
+          padding: 4px;
+          background: rgb(235, 235, 235);
+        }
+
+        .btn-facebook-signin {
+          border: 1px solid #3a5898;
+          border-radius: 4px;
+          padding: 4px;
+          background: #3a5898;
+          margin: 0 8px;
+        }
+
+        .btn-facebook-signin:hover {
+          border: 1px solid #333;
+          border-radius: 4px;
+          padding: 4px;
+          background: rgb(235, 235, 235);
+        }
+
+        .btn-github-signin {
+          border: 1px solid #555;
+          border-radius: 4px;
+          padding: 4px;
+        }
+
+        .btn-github-signin:hover {
+          border: 1px solid #555;
+          border-radius: 4px;
+          padding: 4px;
+          background: rgb(235, 235, 235);
+        }
+      }
+    }
+  }
+}
