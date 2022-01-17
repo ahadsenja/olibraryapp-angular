@@ -1,4 +1,5 @@
 export class Api {
+  public static GOOGLE_AUTH = 'http://localhost:8000/api/v1/auth/google';
   public static LOGIN_URL = 'http://localhost:8000/api/v1/auth/login';
   public static AUTHORS_URL = 'http://localhost:8000/api/v1/author';
   public static PUBLISHERS_URL = 'http://localhost:8000/api/v1/publisher';
