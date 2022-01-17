@@ -20,4 +20,13 @@ export class AuthService {
     return this.http.post(Api.LOGIN_URL, { email, password }, httpOptions);
   }
 
+  loginWithGoogle(): Observable<any> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    }
+    return this.http.post(Api.GOOGLE_AUTH, httpOptions);
+  }
+
 }
