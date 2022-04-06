@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { FacebookLoginProvider, GoogleLoginProvider, SocialAuthService, SocialUser } from 'angularx-social-login';
+import { GoogleLoginProvider, SocialAuthService, SocialUser } from 'angularx-social-login';
 
 import { AuthService } from '../../core/auth/auth.service';
 import { TokenStorageService } from '../../core/auth/token-storage.service';
@@ -63,7 +63,6 @@ export class LoginComponent {
   doLoginWithGoogle(): void {
     this.socialAuthService.signIn(GoogleLoginProvider.PROVIDER_ID)
       .then((userData) => {
-        console.log(userData)
         this.googleToRestApi(userData.idToken);
       });
   }
@@ -77,23 +76,20 @@ export class LoginComponent {
     })
   }
 
-  doLoginWithFacebook() {
-    this.authService.facebookGetAuthPage().subscribe(result => {
-      console.log('Result FB: ', result);
-    });
-    // FB.login((response) => {
-    //   if (response.status === 'connected') {
-    //     console.log('response: ', response);
-    //   } else {
-    //     console.log('Login failed');
-    //   }
-    // }, { scope: 'public_profile, email' })
-  }
+  // doLoginWithFacebook() {
+  //   FB.login((response) => {
+  //     if (response.status === 'connected') {
+  //       console.log('response: ', response);
+  //     } else {
+  //       console.log('Login failed');
+  //     }
+  //   }, { scope: 'public_profile, email' })
+  // }
 
-  doLoginWithGithub(): void {
-    this.authService.githubGetAuthPage().subscribe(result => {
-      console.log('result: ', result);
-      console.log('ini testing github route dari angular');
-    })
-  }
+  // doLoginWithGithub(): void {
+  //   this.authService.githubGetAuthPage().subscribe(result => {
+  //     console.log('result: ', result);
+  //     console.log('ini testing github route dari angular');
+  //   })
+  // }
 }
