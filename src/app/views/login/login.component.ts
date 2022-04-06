@@ -17,7 +17,6 @@ declare const FB: any;
 })
 
 export class LoginComponent {
-
   email: string = '';
   password: string = '';
 
@@ -79,18 +78,22 @@ export class LoginComponent {
   }
 
   doLoginWithFacebook() {
-    FB.login((response) => {
-      if (response.status === 'connected') {
-        console.log('response: ', response);
-      } else {
-        console.log('Login failed');
-      }
-    }, { scope: 'public_profile, email' })
+    this.authService.facebookGetAuthPage().subscribe(result => {
+      console.log('Result FB: ', result);
+    });
+    // FB.login((response) => {
+    //   if (response.status === 'connected') {
+    //     console.log('response: ', response);
+    //   } else {
+    //     console.log('Login failed');
+    //   }
+    // }, { scope: 'public_profile, email' })
   }
 
   doLoginWithGithub(): void {
     this.authService.githubGetAuthPage().subscribe(result => {
-      console.log('ini testing github route')
+      console.log('result: ', result);
+      console.log('ini testing github route dari angular');
     })
   }
 }
