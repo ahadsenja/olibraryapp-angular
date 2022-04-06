@@ -73,17 +73,8 @@ export const navItems: INavData[] = [
     name: 'Operator',
     url: '/operators/operators',
     icon: 'cil-user-female'
-  },
+  }
 
-  {
-    title: true,
-    name: 'Settings'
-  },
-  {
-    name: 'Settings',
-    url: '/settings/settings',
-    icon: 'cil-settings'
-  },
   // {
   //   title: true,
   //   name: 'Theme'
