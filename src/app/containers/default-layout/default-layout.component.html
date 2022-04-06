@@ -28,9 +28,9 @@
             class="badge badge-danger">42</span></a>
         <div class="dropdown-header text-center"><strong>Settings</strong></div>
         <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
-        <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Setting</a>
+        <a class="dropdown-item" [routerLink]="['/settings/settings']"><i class="fa fa-wrench"></i> Setting</a>
         <div class="divider"></div>
-        <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> Logout</a>
+        <a type="button" class="dropdown-item" (click)="doLogout()"><i class="fa fa-lock"></i> Logout</a>
       </div>
     </li>
   </ul>
