@@ -4,6 +4,8 @@ export class Api {
   public static FACEBOOK_AUTH_URL = 'http://localhost:8000/api/v1/auth/facebook';
   public static GITHUB_AUTH_URL = 'http://localhost:8000/api/v1/auth/github';
 
+  public static GET_PROFILE_URL = 'http://localhost:8000/api/v1/auth/profile';
+
   public static AUTHORS_URL = 'http://localhost:8000/api/v1/author';
   public static PUBLISHERS_URL = 'http://localhost:8000/api/v1/publisher';
   public static CATEGORIES_URL = 'http://localhost:8000/api/v1/category';
