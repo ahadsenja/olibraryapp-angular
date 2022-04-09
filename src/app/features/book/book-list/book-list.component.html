@@ -24,11 +24,11 @@
                             <div class="col-md-2" *ngFor="let book of books">
                                 <div class="card" style="padding: 10px 10px 10px">
                                     <img src="assets/img/brand/Olibrari.png" alt="Ekonomi Syari'ah"
-                                        style="background-color: #727272; padding: 30px 10px">
+                                        style="background-color: #727272; padding: 30px 10px;">
                                     <br>
                                     <h4>{{ book.title }}</h4>
                                     <span><strong>Author:</strong> {{ book.author.name }}</span>
-                                    <span><strong>Published:</strong> {{ book.year }}</span>
+                                    <span><strong>Category:</strong> {{ book.category.name }}</span>
                                     <span><strong>Stock:</strong> {{ book.stock }}</span>
                                     <hr>
                                     <div class="btn-action">
@@ -44,8 +44,11 @@
                                             data-placement="top" title="Delete" (click)="onDeleteBook(book)">
                                             <i class="fa fa-trash"></i>
                                         </a>
+
+                                        <a class="btn-borrow" [routerLink]="['/borrows/borrows']">Borrow</a>
                                     </div>
                                 </div>
+                                <br>
                             </div>
                         </div>
                     </div>
