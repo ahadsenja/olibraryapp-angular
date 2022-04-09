@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../../core/auth/auth.service';
 
 import { TokenStorageService } from '../../core/auth/token-storage.service';
+import { ProfileService } from '../../services/profile/profile.service';
 import { navItems } from '../../_nav';
 
 @Component({
