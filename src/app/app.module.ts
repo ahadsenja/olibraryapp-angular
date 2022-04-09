@@ -31,6 +31,7 @@ import { GenreModule } from './features/genre/genre.module';
 import { OperatorModule } from './features/operator/operator.module';
 import { PublisherModule } from './features/publisher/publisher.module';
 import { SettingModule } from './features/setting/setting.module';
+import { ProfileModule } from './features/profile/profile.module';
 
 import { AppComponent } from './app.component';
 
@@ -97,7 +98,8 @@ import { AuthGuard } from './core/guard/auth.guard';
     GenreModule,
     OperatorModule,
     PublisherModule,
-    SettingModule
+    SettingModule,
+    ProfileModule
   ],
   declarations: [
     AppComponent,
@@ -105,7 +107,7 @@ import { AuthGuard } from './core/guard/auth.guard';
     P404Component,
     P500Component,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
   ],
   providers: [
     {
