@@ -55,6 +55,7 @@ export class LoginComponent {
       this.authService.login(email, password).subscribe(data => {
         this.isLoggedIn = true;
         this.token.saveToken(data.token);
+        this.token.saveUser(data);
         this.router.navigate(['/dashboard/dashboard']);
       })
     }
@@ -64,6 +65,7 @@ export class LoginComponent {
     this.socialAuthService.signIn(GoogleLoginProvider.PROVIDER_ID)
       .then((userData) => {
         this.googleToRestApi(userData.idToken);
+        this.token.saveUser(userData);
       });
   }
 
@@ -76,20 +78,4 @@ export class LoginComponent {
     })
   }
 
-  // doLoginWithFacebook() {
-  //   FB.login((response) => {
-  //     if (response.status === 'connected') {
-  //       console.log('response: ', response);
-  //     } else {
-  //       console.log('Login failed');
-  //     }
-  //   }, { scope: 'public_profile, email' })
-  // }
-
-  // doLoginWithGithub(): void {
-  //   this.authService.githubGetAuthPage().subscribe(result => {
-  //     console.log('result: ', result);
-  //     console.log('ini testing github route dari angular');
-  //   })
-  // }
 }
