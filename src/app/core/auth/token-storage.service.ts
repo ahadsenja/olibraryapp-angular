@@ -31,7 +31,7 @@ export class TokenStorageService {
       return JSON.parse(user)
     }
 
-    return {}
+    return {};
   }
 
   public logout() {
