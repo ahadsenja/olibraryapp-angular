@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { SocialLoginModule, SocialAuthServiceConfig, FacebookLoginProvider } from 'angularx-social-login';
+import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
 import { GoogleLoginProvider } from 'angularx-social-login';
 
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
@@ -118,10 +118,6 @@ import { AuthGuard } from './core/guard/auth.guard';
           {
             id: GoogleLoginProvider.PROVIDER_ID,
             provider: new GoogleLoginProvider('558315854775-eqp8ftvt254beg3cc22r7b0oc7451hk5.apps.googleusercontent.com')
-          },
-          {
-            id: FacebookLoginProvider.PROVIDER_ID,
-            provider: new FacebookLoginProvider('1065788820633925')
           }
         ]
       } as SocialAuthServiceConfig
