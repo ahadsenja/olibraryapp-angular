@@ -116,6 +116,12 @@ export const routes: Routes = [
         path: 'settings',
         loadChildren: () => import('./features/setting/setting.module').then(m => m.SettingModule),
         canActivate: [AuthGuard]
+      },
+      {
+        path: 'profile',
+        loadChildren: () => import('./features/profile/profile.module').then(m => m.ProfileModule),
+        canActivate: [AuthGuard]
+
       }
     ]
     // children: [
