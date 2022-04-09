@@ -19,11 +19,29 @@
       }
     }
 
-    .table {
-      margin-top: 30px;
+    .book-list {
+      .card {
+        .btn-action {
+          .btn-borrow {
+            position: absolute;
+            right: 10px;
+            padding: 7px 10px;
+            background-color: rgb(19, 161, 226);
+            color: #ffffff;
+            border-radius: 3px;
+            text-decoration: none;
+          }
 
-      .btn {
-        color: #fff;
+          .btn-borrow:hover {
+            position: absolute;
+            right: 10px;
+            padding: 7px 10px;
+            background-color: rgb(19, 161, 226);
+            color: #ffffff;
+            border-radius: 3px;
+            text-decoration: none;
+          }
+        }
       }
     }
   }
