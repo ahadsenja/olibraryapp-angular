@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+
 import { AuthorService } from '../../../services/author/author.service';
 import { Author } from '../../../shared/models/author/author';
 
@@ -48,6 +49,11 @@ export class AuthorCreateComponent implements OnInit {
     });
 
     this.formGroup.reset();
+    this.router.navigate(['/authors/authors']);
+  }
+
+  onCancelSubmit(event) {
+    event.preventDefault();
     this.router.navigate(['/authors/authors']);
   }
 
