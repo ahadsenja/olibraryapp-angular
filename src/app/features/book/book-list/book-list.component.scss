@@ -25,6 +25,10 @@
         border: none;
 
         .btn-action {
+          a {
+            color: #fff
+          }
+
           .btn-borrow {
             position: absolute;
             right: 10px;
