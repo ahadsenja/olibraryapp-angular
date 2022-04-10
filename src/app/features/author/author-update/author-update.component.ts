@@ -67,4 +67,9 @@ export class AuthorUpdateComponent implements OnInit {
     );
   }
 
+  onCancelSubmit(event) {
+    event.preventDefault();
+    this.router.navigate(['/authors/authors']);
+  }
+
 }
