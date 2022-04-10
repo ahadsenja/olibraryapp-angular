@@ -53,4 +53,9 @@ export class PublisherUpdateComponent implements OnInit {
     }, error => console.log(error));
   }
 
+  onCancelSubmit(event) {
+    event.preventDefault();
+    this.router.navigate(['/publishers/publishers']);
+  }
+
 }
