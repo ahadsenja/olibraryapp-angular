@@ -53,4 +53,9 @@ export class OperatorCreateComponent implements OnInit {
     this.router.navigate(['/operators/operators']);
   }
 
+  onCancelSubmit(event) {
+    event.preventDefault();
+    this.router.navigate(['/operators/operators']);
+  }
+
 }
