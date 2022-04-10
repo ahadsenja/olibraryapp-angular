@@ -45,4 +45,9 @@ export class GenreCreateComponent implements OnInit {
     this.router.navigate(['/genres/genres']);
   }
 
+  onCancelSubmit(event) {
+    event.preventDefault();
+    this.router.navigate(['/genres/genres']);
+  }
+
 }
