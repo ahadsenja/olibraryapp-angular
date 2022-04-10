@@ -88,4 +88,9 @@ export class BorrowCreateComponent implements OnInit {
     });
   }
 
+  onCancelSubmit(event) {
+    event.preventDefault();
+    this.router.navigate(['/borrows/borrows']);
+  }
+
 }
