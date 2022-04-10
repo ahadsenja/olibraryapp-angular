@@ -74,4 +74,9 @@ export class CustomerUpdateComponent implements OnInit {
     this.router.navigate(['/customers/customers']);
   }
 
+  onCancelSubmit(event) {
+    event.preventDefault();
+    this.router.navigate(['/customers/customers']);
+  }
+
 }
