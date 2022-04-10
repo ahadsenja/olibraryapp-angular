@@ -45,4 +45,9 @@ export class SettingCreateComponent implements OnInit {
     this.router.navigate(['/settings/settings']);
   }
 
+  onCancelSubmit(event) {
+    event.preventDefault();
+    this.router.navigate(['/settings/settings']);
+  }
+
 }
