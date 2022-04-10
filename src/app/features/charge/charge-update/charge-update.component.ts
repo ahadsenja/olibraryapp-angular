@@ -62,11 +62,15 @@ export class ChargeUpdateComponent implements OnInit {
     this.router.navigate(['/charges/charges']);
   }
 
-  // GET BOOK RETURNS DATA
   getBookreturns() {
     this.bookreturnService.getAll().subscribe(res => {
       this.bookreturns = res.data;
     });
+  }
+
+  onCancelSubmit(event) {
+    event.preventDefault();
+    this.router.navigate(['/charges/charges']);
   }
 
 }
