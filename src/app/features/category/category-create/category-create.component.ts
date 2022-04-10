@@ -44,4 +44,9 @@ export class CategoryCreateComponent implements OnInit {
     this.router.navigate(['/categories/categories']);
   }
 
+  onCancelSubmit(event) {
+    event.preventDefault();
+    this.router.navigate(['/categories/categories']);
+  }
+
 }
