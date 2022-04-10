@@ -97,4 +97,9 @@ export class BookreturnUpdateComponent implements OnInit {
     });
   }
 
+  onCancelSubmit(event) {
+    event.preventDefault();
+    this.router.navigate(['/bookreturns/bookreturns']);
+  }
+
 }
