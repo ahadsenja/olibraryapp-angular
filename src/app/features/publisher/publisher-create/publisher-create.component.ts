@@ -46,4 +46,9 @@ export class PublisherCreateComponent implements OnInit {
     this.router.navigate(['/publishers/publishers']);
   }
 
+  onCancelSubmit(event) {
+    event.preventDefault();
+    this.router.navigate(['/publishers/publishers']);
+  }
+
 }
