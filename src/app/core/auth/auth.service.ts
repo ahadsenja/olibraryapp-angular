@@ -24,31 +24,13 @@ export class AuthService {
     return this.http.post(Api.LOGIN_URL, { email, password }, httpOptions);
   }
 
-  loginWithGoogle(accessToken: string): Observable<any> {
+  loginWithGoogle(idToken: string): Observable<any> {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })
     }
-    return this.http.post(Api.GOOGLE_AUTH_URL, { accessToken }, httpOptions);
-  }
-
-  githubGetAuthPage(): Observable<any> {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json'
-      })
-    }
-    return this.http.get(Api.GITHUB_AUTH_URL, httpOptions);
-  }
-
-  facebookGetAuthPage(): Observable<any> {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json'
-      })
-    }
-    return this.http.get(Api.FACEBOOK_AUTH_URL, httpOptions);
+    return this.http.post(Api.GOOGLE_AUTH_URL, { idToken }, httpOptions);
   }
 
 }
