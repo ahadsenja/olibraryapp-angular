@@ -63,6 +63,8 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
 import { AuthGuard } from './core/guard/auth.guard';
+import { TransactionDetailsComponent } from './components/transaction-details/transaction-details.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   imports: [
@@ -108,6 +110,8 @@ import { AuthGuard } from './core/guard/auth.guard';
     P500Component,
     LoginComponent,
     RegisterComponent,
+    TransactionDetailsComponent,
+    AboutComponent,
   ],
   providers: [
     {
