@@ -19,10 +19,10 @@
             </div>
 
             <div class="col-md-4 mb-3">
-              <label for="book_return" class="form-label">Book Return</label>
+              <label for="book_return" class="form-label">Select Returned Book</label>
               <select class="form-control" name="book_return_id" aria-label="Default select example"
                 formControlName="book_return_id">
-                <option selected>Select Book Return</option>
+                <!-- <option selected>Select Returned Book</option> -->
                 <option *ngFor="let bookreturn of bookreturns" [value]="bookreturn.id">{{
                   bookreturn.book.title }}</option>
               </select>
