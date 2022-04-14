@@ -21,7 +21,7 @@
             </div>
 
             <div class="col-md-4 mb-3">
-              <span>Select Book</span>
+              <label>Select Book</label>
               <select class="form-control" name="book_id" aria-label="Default select example" formControlName="book_id">
                 <!-- <option selected>Select Book</option> -->
                 <option *ngFor="let book of books" [value]="book.id">{{
@@ -30,7 +30,7 @@
             </div>
 
             <div class="col-md-4 mb-3">
-              <span>Select Customer</span>
+              <label>Select Customer</label>
               <select class="form-control" name="customer_id" aria-label="Default select example"
                 formControlName="customer_id">
                 <!-- <option selected>Select Customer</option> -->
@@ -40,7 +40,7 @@
             </div>
 
             <div class="col-md-4 mb-3">
-              <span>Select Operator</span>
+              <label>Select Operator</label>
               <select class="form-control" name="operator_id" aria-label="Default select example"
                 formControlName="operator_id">
                 <!-- <option selected>Select Operator</option> -->
