@@ -21,26 +21,29 @@
             </div>
 
             <div class="col-md-4 mb-3">
+              <span>Select Book</span>
               <select class="form-control" name="book_id" aria-label="Default select example" formControlName="book_id">
-                <option selected>Select Book</option>
+                <!-- <option selected>Select Book</option> -->
                 <option *ngFor="let book of books" [value]="book.id">{{
                   book.title }}</option>
               </select>
             </div>
 
             <div class="col-md-4 mb-3">
+              <span>Select Customer</span>
               <select class="form-control" name="customer_id" aria-label="Default select example"
                 formControlName="customer_id">
-                <option selected>Select Customer</option>
+                <!-- <option selected>Select Customer</option> -->
                 <option *ngFor="let customer of customers" [value]="customer.id">{{
                   customer.name }}</option>
               </select>
             </div>
 
             <div class="col-md-4 mb-3">
+              <span>Select Operator</span>
               <select class="form-control" name="operator_id" aria-label="Default select example"
                 formControlName="operator_id">
-                <option selected>Select Operator</option>
+                <!-- <option selected>Select Operator</option> -->
                 <option *ngFor="let operator of operators" [value]="operator.id">{{
                   operator.name }}</option>
               </select>
