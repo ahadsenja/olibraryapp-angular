@@ -24,9 +24,10 @@
             </div>
 
             <div class="col-md-3 mb-3">
+              <span>Select Author</span>
               <select class="form-control" name="author_id" aria-label="Default select example"
                 formControlName="author_id">
-                <option selected>Select Author</option>
+                <!-- <option selected>Select Author</option> -->
                 <option *ngFor="let author of authors" [value]="author.id">{{
                   author.name
                   }}</option>
@@ -34,9 +35,10 @@
             </div>
 
             <div class="col-md-3 mb-3">
+              <span>Select Genre</span>
               <select class="form-control" name="genre_id" aria-label="Default select example"
                 formControlName="genre_id">
-                <option selected>Select Genre</option>
+                <!-- <option selected>Select Genre</option> -->
                 <option *ngFor="let genre of genres" [value]="genre.id">{{
                   genre.name }}
                 </option>
@@ -44,18 +46,20 @@
             </div>
 
             <div class="col-md-3 mb-3">
+              <span>Select Category</span>
               <select class="form-control" name="category_id" aria-label="Default select example"
                 formControlName="category_id">
-                <option selected>Select Category</option>
+                <!-- <option selected>Select Category</option> -->
                 <option *ngFor="let category of categories" [value]="category.id">{{
                   category.name }}</option>
               </select>
             </div>
 
             <div class="col-md-3 mb-3">
+              <span>Select Publisher</span>
               <select class="form-control" name="publisher_id" aria-label="Default select example"
                 formControlName="publisher_id">
-                <option selected>Select Publisher</option>
+                <!-- <option selected>Select Publisher</option> -->
                 <option *ngFor="let publisher of publishers" [value]="publisher.id">{{
                   publisher.name }}</option>
               </select>
