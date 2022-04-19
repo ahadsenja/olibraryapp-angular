@@ -36,4 +36,8 @@ export class BorrowService {
     return this.http.get<Borrow[]>(`${Api.BORROWS_URL}/${id}`);
   }
 
+  getBorrowedBookByCustomerId(id: number): Observable<any> {
+    return this.http.get<Borrow[]>(`${Api.BORROWED_BOOK_BY_CUSTOMER}/${id}`);
+  }
+
 }
