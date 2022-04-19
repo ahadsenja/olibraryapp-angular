@@ -35,7 +35,7 @@
                                 <td>{{ author.name }}</td>
                                 <td>{{ author.email }}</td>
                                 <td>{{ author.address }}</td>
-                                <td>{{ author.born_date }}</td>
+                                <td>{{ author.born_date | date :'mediumDate' }}</td>
                                 <td>
                                     <a type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top"
                                         title="Details">
