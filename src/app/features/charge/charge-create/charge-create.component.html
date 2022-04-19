@@ -8,12 +8,12 @@
 
         <div class="card-body">
           <form [formGroup]="formGroup" (ngSubmit)="onCreateCharge()" class="row g-3">
-            <div class="col-md-4 mb-3">
+            <div class="col-md-2 mb-3">
               <label for="date" class="form-label">Date</label>
               <input type="date" name="date" class="form-control" placeholder="Date" formControlName="date">
             </div>
 
-            <div class="col-md-4 mb-3">
+            <div class="col-md-2 mb-3">
               <label for="cost" class="form-label">Cost</label>
               <input type="text" name="cost" class="form-control" placeholder="Cost" formControlName="cost">
             </div>
