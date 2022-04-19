@@ -6,6 +6,7 @@ import { BookService } from '../../../services/book/book.service';
 import { BorrowService } from '../../../services/borrow/borrow.service';
 import { CustomerService } from '../../../services/customer/customer.service';
 import { OperatorService } from '../../../services/operator/operator.service';
+import { ProfileService } from '../../../services/profile/profile.service';
 
 import { Book } from '../../../shared/models/book/book';
 import { Borrow } from '../../../shared/models/borrow/borrow';
@@ -30,6 +31,9 @@ export class BorrowCreateComponent implements OnInit {
   customers: Customer[] = [];
   operators: Operator[] = [];
 
+  customer_data: any = [];
+  operator_data: any = [];
+
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
@@ -44,13 +48,15 @@ export class BorrowCreateComponent implements OnInit {
       borrow_date: [null],
       return_date: [null],
       book_id: [0],
-      customer_id: [0],
-      operator_id: [0]
+      customer_id: [history.state.data.cst.id],
+      operator_id: [history.state.data.opr.id]
     });
 
     this.getBooks();
     this.getCustomers();
-    this.getOperators();
+
+    this.customer_data = history.state.data.cst.name;
+    this.operator_data = history.state.data.opr.name;
   }
 
   onCreateBorrow() {
@@ -79,12 +85,6 @@ export class BorrowCreateComponent implements OnInit {
   getCustomers() {
     this.customerService.getAll().subscribe(res => {
       this.customers = res.data;
-    });
-  }
-
-  getOperators() {
-    this.operatorService.getAll().subscribe(res => {
-      this.operators = res.data;
     });
   }
 
