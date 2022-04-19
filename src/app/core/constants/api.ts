@@ -13,8 +13,10 @@ export class Api {
   public static BOOKS_URL = 'http://localhost:8000/api/v1/book';
 
   public static BORROWS_URL = 'http://localhost:8000/api/v1/borrow';
+  public static BORROWED_BOOK_BY_CUSTOMER = 'http://localhost:8000/api/v1/borrow/book-borrowed'
   public static BOOKRETURNS_URL = 'http://localhost:8000/api/v1/bookreturn';
   public static CHARGES_URL = 'http://localhost:8000/api/v1/charge';
+  public static CHARGES_BY_CUSTOMER_URL = 'http://localhost:8000/api/v1/charge/show-charges';
 
   public static CUSTOMERS_URL = 'http://localhost:8000/api/v1/customer';
   public static OPERATORS_URL = 'http://localhost:8000/api/v1/operator';
