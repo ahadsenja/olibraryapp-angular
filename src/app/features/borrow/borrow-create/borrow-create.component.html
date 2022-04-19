@@ -8,19 +8,13 @@
 
         <div class="card-body">
           <form [formGroup]="formGroup" (ngSubmit)="onCreateBorrow()" class="row g-3">
-            <div class="col-md-6 mb-3">
-              <label for="borrow_date" class="form-label">Borrow Date</label>
-              <input type="date" name="borrow_date" class="form-control" placeholder="Borrow Date"
-                formControlName="borrow_date">
-            </div>
-
-            <div class="col-md-6 mb-3">
-              <label for="return_date" class="form-label">Return Date</label>
-              <input type="date" name="return_date" class="form-control" placeholder="Return Date"
-                formControlName="return_date">
-            </div>
-
             <div class="col-md-4 mb-3">
+              <label>Customer Name: </label> <br>
+              <span class="badge badge-success customer_name">{{customer_data}}</span>
+              <input type="text" class="form-control" name="customer_id" formControlName="customer_id" hidden>
+            </div>
+
+            <div class="col-md-8 mb-3">
               <label>Select Book</label>
               <select class="form-control" name="book_id" aria-label="Default select example" formControlName="book_id">
                 <!-- <option selected>Select Book</option> -->
@@ -30,27 +24,31 @@
             </div>
 
             <div class="col-md-4 mb-3">
-              <label>Select Customer</label>
-              <select class="form-control" name="customer_id" aria-label="Default select example"
-                formControlName="customer_id">
-                <!-- <option selected>Select Customer</option> -->
-                <option *ngFor="let customer of customers" [value]="customer.id">{{
-                  customer.name }}</option>
-              </select>
+              <label>Operator :</label> <br>
+              <span class="badge badge-primary operator_name">{{operator_data}}</span>
+              <input type="text" class="form-control" name="operator_id" formControlName="operator_id" hidden>
+              <!-- <select class="form-control" name="operator_id" aria-label="Default select example"
+                formControlName="operator_id">
+                <option selected>Select Operator</option>
+                <option *ngFor="let operator of operators" [value]="operator.id">{{
+                  operator.name }}</option>
+              </select> -->
             </div>
 
             <div class="col-md-4 mb-3">
-              <label>Select Operator</label>
-              <select class="form-control" name="operator_id" aria-label="Default select example"
-                formControlName="operator_id">
-                <!-- <option selected>Select Operator</option> -->
-                <option *ngFor="let operator of operators" [value]="operator.id">{{
-                  operator.name }}</option>
-              </select>
+              <label for="borrow_date" class="form-label">Borrow Date</label>
+              <input type="date" name="borrow_date" class="form-control" placeholder="Borrow Date"
+                formControlName="borrow_date">
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <label for="return_date" class="form-label">Return Date</label>
+              <input type="date" name="return_date" class="form-control" placeholder="Return Date"
+                formControlName="return_date">
             </div>
 
             <div class="btn-action">
-              <button type="submit" class="btn btn-info">Submit</button>
+              <button type="submit" class="btn btn-primary">Submit</button>
               <button (click)="onCancelSubmit($event)" class="btn btn-secondary">Cancel</button>
             </div>
           </form>
