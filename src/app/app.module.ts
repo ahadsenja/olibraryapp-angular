@@ -33,6 +33,8 @@ import { PublisherModule } from './features/publisher/publisher.module';
 import { SettingModule } from './features/setting/setting.module';
 import { ProfileModule } from './features/profile/profile.module';
 
+import { TransactionDetailsModule } from './components/transaction-details/transaction-details.module';
+
 import { AppComponent } from './app.component';
 
 // Import containers
@@ -63,8 +65,6 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
 import { AuthGuard } from './core/guard/auth.guard';
-import { TransactionDetailsComponent } from './components/transaction-details/transaction-details.component';
-import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   imports: [
@@ -101,7 +101,9 @@ import { AboutComponent } from './components/about/about.component';
     OperatorModule,
     PublisherModule,
     SettingModule,
-    ProfileModule
+    ProfileModule,
+
+    TransactionDetailsModule
   ],
   declarations: [
     AppComponent,
@@ -109,9 +111,7 @@ import { AboutComponent } from './components/about/about.component';
     P404Component,
     P500Component,
     LoginComponent,
-    RegisterComponent,
-    TransactionDetailsComponent,
-    AboutComponent,
+    RegisterComponent
   ],
   providers: [
     {
