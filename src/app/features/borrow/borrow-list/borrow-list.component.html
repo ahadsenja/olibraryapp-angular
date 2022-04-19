@@ -32,12 +32,13 @@
             <tbody>
               <tr *ngFor="let borrow of borrows">
                 <td>{{ borrow.id }}</td>
-                <td>{{ borrow.borrow_date }}</td>
-                <td>{{ borrow.return_date}}</td>
+                <td>{{ borrow.borrow_date | date :'mediumDate' }}</td>
+                <td>{{ borrow.return_date | date :'mediumDate' }}</td>
                 <td>{{ borrow.book.title }}</td>
                 <td>{{ borrow.customer.name }}</td>
                 <td>
-                  <a type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Details">
+                  <a type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Details"
+                    (click)="onClickDetails(borrow.id)">
                     <i class="fa fa-eye"></i>
                   </a>
                   <a type="button" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Edit"
