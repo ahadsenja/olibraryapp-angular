@@ -27,9 +27,9 @@
             <tbody>
               <tr *ngFor="let charge of charges">
                 <td>{{ charge.id }}</td>
-                <td>{{ charge.date }}</td>
+                <td>{{ charge.date | date :'mediumDate' }}</td>
                 <td>{{ charge.cost }}</td>
-                <td>{{ charge.book_return.date }}</td>
+                <td>{{ charge.book_return.date | date :'mediumDate' }}</td>
                 <td>
                   <a type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Details">
                     <i class="fa fa-eye"></i>
