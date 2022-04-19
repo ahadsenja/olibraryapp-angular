@@ -1,1 +1,100 @@
-<p>transaction-details works!</p>
+<div class="card">
+  <div class="container-fluid">
+    <h2>User Transaction Details</h2>
+
+    <div class="row">
+      <div class="col-md-2">
+        <img src="assets/img/avatars/8.jpg" alt="Avatar">
+        <div>
+          <h3>{{customer.name}}</h3>
+          <p>{{customer.email}}</p>
+        </div>
+      </div>
+
+      <br>
+      <div class="col-md-10">
+        <div class="info-tab">
+          <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <button class="nav-link active" id="nav-borrow-tab" data-bs-toggle="tab" data-bs-target="#nav-borrow"
+                type="button" role="tab" aria-controls="nav-borrow" aria-selected="true">Borrow</button>
+              <button class="nav-link" id="nav-charge-tab" data-bs-toggle="tab" data-bs-target="#nav-charge"
+                type="button" role="tab" aria-controls="nav-charge" aria-selected="false">Charge</button>
+              <button class="nav-link" id="nav-history-tab" data-bs-toggle="tab" data-bs-target="#nav-history"
+                type="button" role="tab" aria-controls="nav-history" aria-selected="false">History</button>
+            </div>
+          </nav>
+
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-borrow" role="tabpanel" aria-labelledby="nav-borrow-tab">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>Book</th>
+                    <th>Due Date</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr *ngFor="let bbook of borrowedBooks">
+                    <td>{{ bbook.book.title }}</td>
+                    <td>{{ bbook.return_date | date: 'mediumDate' }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="tab-pane fade" id="nav-charge" role="tabpanel" aria-labelledby="nav-charge-tab">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>Charge Fee (Rp)</th>
+                    <th>From</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>a</td>
+                    <td>b</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="tab-pane fade" id="nav-history" role="tabpanel" aria-labelledby="nav-contact-tab">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Book</th>
+                    <th>Borrowed Date</th>
+                    <th>Returned Date</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Now You See Me</td>
+                    <td>05/30/2022</td>
+                    <td>05/30/2022</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="btn-action" align="center">
+        <button class="btn btn-primary continue-book" (click)="continueToBorrowingBook()">
+          Continue to Borrow a Book
+        </button>
+        <button class="btn btn-secondary" [routerLink]="['/dashboard/dashboard']">Dashboard</button>
+      </div>
+    </div>
+  </div>
+</div>
