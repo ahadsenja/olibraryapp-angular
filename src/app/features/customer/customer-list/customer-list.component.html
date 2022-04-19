@@ -37,7 +37,8 @@
                 <td>{{ customer.address }}</td>
                 <td>{{ customer.handphone }}</td>
                 <td>
-                  <a type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Details">
+                  <a type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Details"
+                    (click)="onClickDetails(customer.id)">
                     <i class="fa fa-eye"></i>
                   </a>
                   <a type="button" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Edit"
