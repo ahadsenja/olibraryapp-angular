@@ -37,4 +37,8 @@ export class ChargeService {
     return this.http.get<Charge[]>(`${Api.CHARGES_URL}/${id}`);
   }
 
+  getChargeByCustomerId(id: number): Observable<any> {
+    return this.http.get<Charge[]>(`${Api.CHARGES_BY_CUSTOMER_URL}/${id}`);
+  }
+
 }
