@@ -39,4 +39,8 @@ export class CustomerListComponent implements OnInit {
     });
   }
 
+  onClickDetails(id: number) {
+    this.router.navigate(['/transaction-details/transaction-details', id]);
+  }
+
 }
