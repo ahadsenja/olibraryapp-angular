@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { BorrowService } from '../../../services/borrow/borrow.service';
 import { Borrow } from '../../../shared/models/borrow/borrow';
@@ -15,7 +15,8 @@ export class BorrowListComponent implements OnInit {
 
   constructor(
     private borrowService: BorrowService,
-    private router: Router
+    private router: Router,
+    private activatedRoute: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
@@ -38,6 +39,10 @@ export class BorrowListComponent implements OnInit {
       this.borrows = this.borrows.filter(id => id !== borrow);
       alert('WARNING! \n The data you choose will be deleted!');
     });
+  }
+
+  onClickDetails(id: number) {
+    this.router.navigate(['/transaction-details/transaction-details', id]);
   }
 
 }
