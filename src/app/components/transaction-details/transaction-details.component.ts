@@ -38,12 +38,14 @@ export class TransactionDetailsComponent implements OnInit {
   getCustomerData(id: number) {
     this.customerService.getById(id).subscribe(result => {
       this.customer = result.data;
+      console.log(result.data);
     });
   }
 
   getOperatorProfile() {
     this.profileService.getProfile().subscribe(result => {
-      this.operator = result.email;
+      this.operator = result;
+      console.log(this.operator);
     });
   }
 
