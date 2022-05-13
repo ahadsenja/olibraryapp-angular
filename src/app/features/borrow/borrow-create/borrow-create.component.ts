@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { DatePipe } from '@angular/common';
 
 import { BookService } from '../../../services/book/book.service';
 import { BorrowService } from '../../../services/borrow/borrow.service';
@@ -17,7 +18,8 @@ import { Operator } from '../../../shared/models/operator/operator';
 @Component({
   selector: 'app-borrow-create',
   templateUrl: './borrow-create.component.html',
-  styleUrls: ['./borrow-create.component.scss']
+  styleUrls: ['./borrow-create.component.scss'],
+  providers: [DatePipe]
 })
 export class BorrowCreateComponent implements OnInit {
 
@@ -40,13 +42,14 @@ export class BorrowCreateComponent implements OnInit {
     private borrowService: BorrowService,
     private bookService: BookService,
     private customerService: CustomerService,
-    private operatorService: OperatorService
+    private operatorService: OperatorService,
+    private datePipe: DatePipe
   ) { }
 
   ngOnInit(): void {
     this.formGroup = this.formBuilder.group({
-      borrow_date: [null],
-      return_date: [null],
+      borrow_date: [this.datePipe.transform(new Date, 'dd/mm/yyyy')],
+      return_date: [this.datePipe.transform(new Date, 'dd/mm/yyyy')],
       book_id: [0],
       customer_id: [history.state.data.cst.id],
       operator_id: [history.state.data.opr.id]
