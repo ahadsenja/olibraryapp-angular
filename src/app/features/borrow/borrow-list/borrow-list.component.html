@@ -23,6 +23,8 @@
                 <th>#</th>
                 <th>Borrow Date</th>
                 <th>Return Date</th>
+                <th>Overdue</th>
+                <th>Charge</th>
                 <th>Book</th>
                 <th>Customer</th>
                 <th>Action</th>
@@ -34,6 +36,8 @@
                 <td>{{ borrow.id }}</td>
                 <td>{{ borrow.borrow_date | date :'mediumDate' }}</td>
                 <td>{{ borrow.return_date | date :'mediumDate' }}</td>
+                <td>{{ borrow.overdue}}</td>
+                <td>{{ borrow.charge}}</td>
                 <td>{{ borrow.book.title }}</td>
                 <td>{{ borrow.customer.name }}</td>
                 <td>

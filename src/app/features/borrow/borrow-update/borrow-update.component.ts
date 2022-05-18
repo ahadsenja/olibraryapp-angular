@@ -51,6 +51,8 @@ export class BorrowUpdateComponent implements OnInit {
       this.formGroup = new FormGroup({
         borrow_date: new FormControl(res.data.borrow_date),
         return_date: new FormControl(res.data.return_date),
+        overdue: new FormControl(res.data.overdue),
+        charge: new FormControl(res.data.charge),
         book_id: new FormControl(res.data.book_id),
         customer_id: new FormControl(res.data.customer_id),
         operator_id: new FormControl(res.data.operator_id)
@@ -65,6 +67,8 @@ export class BorrowUpdateComponent implements OnInit {
   onUpdateBorrow() {
     this.borrow.borrow_date = this.formGroup.value.borrow_date;
     this.borrow.return_date = this.formGroup.value.return_date;
+    this.borrow.overdue = this.formGroup.value.overdue;
+    this.borrow.charge = this.formGroup.value.charge;
     this.borrow.book_id = this.formGroup.value.book_id;
     this.borrow.customer_id = this.formGroup.value.customer_id;
     this.borrow.operator_id = this.formGroup.value.operator_id;

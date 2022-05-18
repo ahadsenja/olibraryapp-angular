@@ -17,7 +17,6 @@
             <div class="col-md-8 mb-3">
               <label>Select Book</label>
               <select class="form-control" name="book_id" aria-label="Default select example" formControlName="book_id">
-                <!-- <option selected>Select Book</option> -->
                 <option *ngFor="let book of books" [value]="book.id">{{
                   book.title }}</option>
               </select>
@@ -39,6 +38,16 @@
               <label for="return_date" class="form-label">Return Date</label>
               <input type="date" name="return_date" class="form-control" placeholder="Return Date"
                 formControlName="return_date">
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <label for="overdue" class="form-label">Overdue</label>
+              <input type="text" name="overdue" class="form-control" placeholder="Overdue" formControlName="overdue">
+            </div>
+
+            <div class="col-md-4 mb-3">
+              <label for="charge" class="form-label">Charge</label>
+              <input type="text" name="charge" class="form-control" placeholder="Charge" formControlName="charge">
             </div>
 
             <div class="btn-action">

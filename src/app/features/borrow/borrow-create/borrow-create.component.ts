@@ -50,6 +50,8 @@ export class BorrowCreateComponent implements OnInit {
     this.formGroup = this.formBuilder.group({
       borrow_date: [this.datePipe.transform(new Date, 'dd/mm/yyyy')],
       return_date: [this.datePipe.transform(new Date, 'dd/mm/yyyy')],
+      overdue: [0],
+      charge: [0],
       book_id: [0],
       customer_id: [history.state.data.cst.id],
       operator_id: [history.state.data.opr.id]
@@ -65,6 +67,8 @@ export class BorrowCreateComponent implements OnInit {
   onCreateBorrow() {
     this.borrow.borrow_date = this.formGroup.value.borrow_date;
     this.borrow.return_date = this.formGroup.value.return_date;
+    this.borrow.overdue = this.formGroup.value.overdue;
+    this.borrow.charge = this.formGroup.value.charge;
     this.borrow.book_id = this.formGroup.value.book_id;
     this.borrow.customer_id = this.formGroup.value.customer_id;
     this.borrow.operator_id = this.formGroup.value.operator_id;
