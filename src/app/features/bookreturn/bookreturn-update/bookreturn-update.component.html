@@ -14,31 +14,25 @@
             </div>
 
             <div class="col-md-9 mb-3">
-              <label for="book" class="form-label">Select Book</label>
-              <select class="form-control" name="book_id" aria-label="Default select example" formControlName="book_id">
-                <!-- <option selected>Select Book</option> -->
-                <option *ngFor="let book of books" [value]="book.id">{{
-                  book.title }}</option>
+              <label for="pay_amount" class="form-label">Pay Amount</label>
+              <input type="text" name="pay_amount" class="form-control" placeholder="Amount"
+                formControlName="pay_amount">
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label for="status" class="form-label">Status</label>
+              <select class="form-control" name="status" aria-label="Default select example" formControlName="status">
+                <option [value]="paid">Paid</option>
+                <option [value]="nocharge">No Charge</option>
               </select>
             </div>
 
             <div class="col-md-6 mb-3">
-              <label for="customer" class="form-label">Select Customer</label>
-              <select class="form-control" name="customer_id" aria-label="Default select example"
-                formControlName="customer_id">
-                <!-- <option selected>Select Customer</option> -->
-                <option *ngFor="let customer of customers" [value]="customer.id">{{
-                  customer.name }}</option>
-              </select>
-            </div>
-
-            <div class="col-md-6 mb-3">
-              <label for="operator" class="form-label">Select Operator</label>
-              <select class="form-control" name="operator_id" aria-label="Default select example"
-                formControlName="operator_id">
-                <!-- <option selected>Select Operator</option> -->
-                <option *ngFor="let operator of operators" [value]="operator.id">{{
-                  operator.name }}</option>
+              <label for="borrow" class="form-label">Select Borrowing Data</label>
+              <select class="form-control" name="borrow_id" aria-label="Default select example"
+                formControlName="borrow_id">
+                <option *ngFor="let borrow of borrows" [value]="borrow.id">{{
+                  borrow.customer.name }}</option>
               </select>
             </div>
 

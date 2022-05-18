@@ -41,9 +41,9 @@ export class BookreturnCreateComponent implements OnInit {
   ngOnInit(): void {
     this.formGroup = this.formBuilder.group({
       date: [null],
-      book_id: [0],
-      customer_id: [0],
-      operator_id: [0],
+      pay_amount: [0],
+      status: [''],
+      borrow_id: [0]
     });
 
     this.getBooks();
@@ -53,9 +53,9 @@ export class BookreturnCreateComponent implements OnInit {
 
   onCreateBookReturn() {
     this.bookreturn.date = this.formGroup.value.date;
-    this.bookreturn.book_id = this.formGroup.value.book_id;
-    this.bookreturn.customer_id = this.formGroup.value.customer_id;
-    this.bookreturn.operator_id = this.formGroup.value.operator_id;
+    this.bookreturn.pay_amount = this.formGroup.value.pay_amount;
+    this.bookreturn.status = this.formGroup.value.status;
+    this.bookreturn.borrow_id = this.formGroup.value.borrow_id;
 
     this.bookreturnService.create(this.bookreturn).subscribe(res => {
       this.isSubmitted = true;

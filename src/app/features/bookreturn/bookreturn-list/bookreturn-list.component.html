@@ -22,8 +22,9 @@
               <tr>
                 <th>#</th>
                 <th>Date</th>
-                <th>Book</th>
+                <th>Amount Payed</th>
                 <th>Customer</th>
+                <th>Status</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -32,8 +33,9 @@
               <tr *ngFor="let bookreturn of bookreturns">
                 <td>{{ bookreturn.id }}</td>
                 <td>{{ bookreturn.date | date :'mediumDate' }}</td>
-                <td>{{ bookreturn.book.title }}</td>
-                <td>{{ bookreturn.customer.name }}</td>
+                <td>{{ bookreturn.pay_amount }}</td>
+                <td>{{ bookreturn.borrow.customer.name }}</td>
+                <td>{{ bookreturn.status }}</td>
                 <td>
                   <a type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Details">
                     <i class="fa fa-eye"></i>
