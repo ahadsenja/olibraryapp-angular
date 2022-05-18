@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BorrowService } from '../../services/borrow/borrow.service';
-import { ChargeService } from '../../services/charge/charge.service';
 
 import { CustomerService } from '../../services/customer/customer.service';
 import { ProfileService } from '../../services/profile/profile.service';
@@ -16,11 +15,11 @@ export class TransactionDetailsComponent implements OnInit {
   operator: any = [];
   borrowedBooks: any = [];
   charges: any = [];
+  charge: number = 0;
 
   constructor(
     private customerService: CustomerService,
     private borrowService: BorrowService,
-    private chargeService: ChargeService,
     private profileService: ProfileService,
     private activatedRoute: ActivatedRoute,
     private router: Router
@@ -31,7 +30,6 @@ export class TransactionDetailsComponent implements OnInit {
 
     this.getCustomerData(id);
     this.getBorrowedBookByCustomerId(id);
-    // this.getChargesByCustomerId(id);
     this.getOperatorProfile();
   }
 
@@ -52,13 +50,6 @@ export class TransactionDetailsComponent implements OnInit {
   getBorrowedBookByCustomerId(id: number) {
     this.borrowService.getBorrowedBookByCustomerId(id).subscribe(result => {
       this.borrowedBooks = result.data;
-    })
-  }
-
-  getChargesByCustomerId(id: number) {
-    this.chargeService.getChargeByCustomerId(id).subscribe(result => {
-      this.charges = result.data;
-      console.log('charges: ', this.charges);
     })
   }
 

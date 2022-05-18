@@ -30,6 +30,7 @@
               <table class="table table-hover">
                 <thead>
                   <tr>
+                    <th>#</th>
                     <th>Book</th>
                     <th>Due Date</th>
                   </tr>
@@ -37,6 +38,7 @@
 
                 <tbody>
                   <tr *ngFor="let bbook of borrowedBooks">
+                    <td>{{ bbook.id }}</td>
                     <td>{{ bbook.book.title }}</td>
                     <td>{{ bbook.return_date | date: 'mediumDate' }}</td>
                   </tr>
@@ -48,15 +50,23 @@
               <table class="table table-hover">
                 <thead>
                   <tr>
+                    <th>#</th>
+                    <th>Book</th>
+                    <th>Overdue (day)</th>
                     <th>Charge Fee (Rp)</th>
-                    <th>From</th>
+                    <th>Action</th>
                   </tr>
                 </thead>
 
                 <tbody>
-                  <tr>
-                    <td>a</td>
-                    <td>b</td>
+                  <tr *ngFor="let bbook of borrowedBooks">
+                    <td>{{bbook.id}}</td>
+                    <td>{{bbook.book.title}}</td>
+                    <td>{{bbook.overdue}}</td>
+                    <td>{{bbook.charge}}</td>
+                    <td>
+                      <a href="#" class="btn btn-success btn-sm">Pay</a>
+                    </td>
                   </tr>
                 </tbody>
               </table>
