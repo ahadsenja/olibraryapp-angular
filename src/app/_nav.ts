@@ -55,12 +55,6 @@ export const navItems: INavData[] = [
     icon: 'cil-sync'
   },
   {
-    name: 'Charge',
-    url: '/charges/charges',
-    icon: 'cil-money'
-  },
-
-  {
     title: true,
     name: 'Users'
   },
