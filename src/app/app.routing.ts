@@ -99,11 +99,6 @@ export const routes: Routes = [
         canActivate: [AuthGuard]
       },
       {
-        path: 'charges',
-        loadChildren: () => import('./features/charge/charge.module').then(m => m.ChargeModule),
-        canActivate: [AuthGuard]
-      },
-      {
         path: 'customers',
         loadChildren: () => import('./features/customer/customer.module').then(m => m.CustomerModule),
         canActivate: [AuthGuard]
