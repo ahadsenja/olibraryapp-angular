@@ -25,7 +25,6 @@ import { BookModule } from './features/book/book.module';
 import { BookreturnModule } from './features/bookreturn/bookreturn.module';
 import { BorrowModule } from './features/borrow/borrow.module';
 import { CategoryModule } from './features/category/category.module';
-import { ChargeModule } from './features/charge/charge.module';
 import { CustomerModule } from './features/customer/customer.module';
 import { GenreModule } from './features/genre/genre.module';
 import { OperatorModule } from './features/operator/operator.module';
@@ -95,7 +94,6 @@ import { AuthGuard } from './core/guard/auth.guard';
     BookreturnModule,
     BorrowModule,
     CategoryModule,
-    ChargeModule,
     CustomerModule,
     GenreModule,
     OperatorModule,
