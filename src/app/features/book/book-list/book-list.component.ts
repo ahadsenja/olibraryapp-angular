@@ -12,6 +12,7 @@ import { Book } from '../../../shared/models/book/book';
 export class BookListComponent implements OnInit {
 
   books: Book[] = [];
+  searchTerm: string = '';
 
   constructor(
     private bookService: BookService,
