@@ -31,7 +31,6 @@ import { OperatorModule } from './features/operator/operator.module';
 import { PublisherModule } from './features/publisher/publisher.module';
 import { SettingModule } from './features/setting/setting.module';
 import { ProfileModule } from './features/profile/profile.module';
-
 import { TransactionDetailsModule } from './components/transaction-details/transaction-details.module';
 
 import { AppComponent } from './app.component';

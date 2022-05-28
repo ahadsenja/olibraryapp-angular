@@ -1671,6 +1671,7 @@ __metadata:
     karma-jasmine: ~4.0.0
     karma-jasmine-html-reporter: ^1.5.0
     ng2-charts: ^2.4.2
+    ng2-search-filter: ^0.5.1
     ngx-bootstrap: ^6.2.0
     ngx-perfect-scrollbar: ^10.1.0
     protractor: ~7.0.0
@@ -8133,6 +8134,13 @@ __metadata:
     chart.js: ^2.9.3
     rxjs: ^6.3.3
   checksum: 7cefe19ae79478412490340fbb24ce3e29d8b1d0b087c7d7a7d6f8be7a4f4163058e9da94b535ee317f279159a2eb6055e98ebedb165d22752f123a6e6145904
+  languageName: node
+  linkType: hard
+
+"ng2-search-filter@npm:^0.5.1":
+  version: 0.5.1
+  resolution: "ng2-search-filter@npm:0.5.1"
+  checksum: 2b3e69ae5f198fed883b598f7293e5ece3e11227d09d5566abc9600259625085553fea14bfb170a0b4f548773ae7c1bf3aa30cabec81e8df8abe643bd2d35c81
   languageName: node
   linkType: hard
 
