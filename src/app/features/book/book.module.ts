@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SearchFilterPipe } from '../../components/search-filter/search-filter.pipe';
 
 import { BookRoutingModule } from './book-routing.module';
 
@@ -13,12 +14,15 @@ import { BookUpdateComponent } from './book-update/book-update.component';
   declarations: [
     BookListComponent,
     BookCreateComponent,
-    BookUpdateComponent
+    BookUpdateComponent,
+    SearchFilterPipe
   ],
   imports: [
     CommonModule,
     BookRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    // Ng2SearchPipeModule
   ]
 })
 export class BookModule { }
