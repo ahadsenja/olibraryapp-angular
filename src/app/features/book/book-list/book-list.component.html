@@ -14,14 +14,15 @@
 
                         <form action="" class="search">
                             <i class="fa fa-search"></i>
-                            <input type="search" class="form-control" placeholder="Search">
+                            <input type="text" name="searchTerm" class="form-control" placeholder="Search"
+                                [(ngModel)]="searchTerm">
                         </form>
                     </div>
 
                     <br>
                     <div class="book-list">
                         <div class="row">
-                            <div class="col-md-2" *ngFor="let book of books">
+                            <div class="col-md-2" *ngFor="let book of books | searchFilter: searchTerm">
                                 <div class="card" style="padding: 10px 10px 10px">
                                     <img src="assets/img/book/dont get angry again.jpg" alt="Book">
                                     <br>
