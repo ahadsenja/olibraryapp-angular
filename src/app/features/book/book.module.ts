@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbPaginationModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
-import { JwPaginationComponent } from 'jw-angular-pagination';
 
 import { BookRoutingModule } from './book-routing.module';
 import { NgModuleModule } from '../../modules/ng-module/ng-module.module';
@@ -16,8 +15,7 @@ import { BookUpdateComponent } from './book-update/book-update.component';
   declarations: [
     BookListComponent,
     BookCreateComponent,
-    BookUpdateComponent,
-    JwPaginationComponent
+    BookUpdateComponent
   ],
   imports: [
     CommonModule,

@@ -12,8 +12,8 @@ import { Book } from '../../../shared/models/book/book';
 export class BookListComponent implements OnInit {
 
   books: Book[] = [];
-
   filterText: string = '';
+  pageOfItems: Array<any>;
 
   constructor(
     private bookService: BookService,
@@ -39,6 +39,10 @@ export class BookListComponent implements OnInit {
       this.books = this.books.filter(id => id !== book);
       alert('WARNING! \n The data you choose will be deleted!');
     });
+  }
+
+  onChangePage(pageOfItems: Array<any>) {
+    this.pageOfItems = pageOfItems;
   }
 
 }

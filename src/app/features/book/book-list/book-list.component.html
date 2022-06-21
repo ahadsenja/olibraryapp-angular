@@ -23,7 +23,7 @@
                     <div class="book-list">
                         <div class="row">
                             <div class="col-md-2"
-                                *ngFor="let book of books | filter: filterText">
+                                *ngFor="let book of pageOfItems | filter: filterText">
                                 <div class="card" style="padding: 10px 10px 10px">
                                     <img src="assets/img/book/dont get angry again.jpg" alt="Book">
                                     <br>
@@ -54,9 +54,7 @@
                         </div>
                     </div>
 
-                    <ngb-pagination [pageSize]="totalPages" [collectionSize]="totalItems" [(page)]="currentPage"
-                        [boundaryLinks]="true">
-                    </ngb-pagination>
+                    <jw-pagination [items]="books" (changePage)="onChangePage($event)"></jw-pagination>
                 </div>
             </div>
         </div>
