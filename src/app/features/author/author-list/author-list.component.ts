@@ -11,6 +11,7 @@ import { Author } from '../../../shared/models/author/author';
 export class AuthorListComponent implements OnInit {
 
   authors: Author[] = [];
+  filterText: string = '';
 
   constructor(
     private authorService: AuthorService,
@@ -37,5 +38,7 @@ export class AuthorListComponent implements OnInit {
       alert('The data you choose will be deleted!');
     });
   }
+
+  onSearchValueChanges(inputElement: HTMLInputElement) { }
 
 }
