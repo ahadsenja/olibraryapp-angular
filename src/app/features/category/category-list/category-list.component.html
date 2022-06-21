@@ -29,7 +29,7 @@
 
             <tbody>
               <tr
-                *ngFor="let category of categories | filter: filterText">
+                *ngFor="let category of pageOfItems | filter: filterText">
                 <td>{{category.id}}</td>
                 <td>{{category.name}}</td>
                 <td>{{category.description}}</td>
@@ -49,16 +49,8 @@
               </tr>
             </tbody>
           </table>
-          <ul class="pagination">
-            <li class="page-item"><a class="page-link" href="#">Prev</a></li>
-            <li class="page-item active">
-              <a class="page-link" href="#">1</a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">4</a></li>
-            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-          </ul>
+
+          <jw-pagination [items]="categories" (changePage)="onChangePage($event)"></jw-pagination>
         </div>
       </div>
     </div>

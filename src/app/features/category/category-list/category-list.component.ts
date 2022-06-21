@@ -12,8 +12,8 @@ import { Category } from '../../../shared/models/category/category';
 export class CategoryListComponent implements OnInit {
 
   categories: Category[] = [];
-
   filterText: string = '';
+  pageOfItems: Array<any>;
 
   constructor(
     private categoryService: CategoryService,
@@ -39,5 +39,9 @@ export class CategoryListComponent implements OnInit {
       this.categories = this.categories.filter(id => id !== category);
       alert('WARNING! \n The data you choose will be deleted');
     });
+  }
+
+  onChangePage(pageOfItems: Array<any>) {
+    this.pageOfItems = pageOfItems;
   }
 }
