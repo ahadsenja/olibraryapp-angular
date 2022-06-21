@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SearchFilterPipe } from '../../components/search-filter/search-filter.pipe';
+import { NgbPaginationModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
+import { JwPaginationComponent } from 'jw-angular-pagination';
 
 import { BookRoutingModule } from './book-routing.module';
+import { NgModuleModule } from '../../modules/ng-module/ng-module.module';
 
 import { BookListComponent } from './book-list/book-list.component';
 import { BookCreateComponent } from './book-create/book-create.component';
@@ -15,14 +17,16 @@ import { BookUpdateComponent } from './book-update/book-update.component';
     BookListComponent,
     BookCreateComponent,
     BookUpdateComponent,
-    SearchFilterPipe
+    JwPaginationComponent
   ],
   imports: [
     CommonModule,
     BookRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    // Ng2SearchPipeModule
+    NgbPaginationModule,
+    NgbAlertModule,
+    NgModuleModule
   ]
 })
 export class BookModule { }
