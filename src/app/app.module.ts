@@ -63,6 +63,8 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
 import { AuthGuard } from './core/guard/auth.guard';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   imports: [
@@ -99,8 +101,8 @@ import { AuthGuard } from './core/guard/auth.guard';
     PublisherModule,
     SettingModule,
     ProfileModule,
-
-    TransactionDetailsModule
+    TransactionDetailsModule,
+    NgbModule
   ],
   declarations: [
     AppComponent,
@@ -108,7 +110,8 @@ import { AuthGuard } from './core/guard/auth.guard';
     P404Component,
     P500Component,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ModalComponent,
   ],
   providers: [
     {
