@@ -1,0 +1,68 @@
+<div class="modal-header">
+  <p>{{borrowData}}</p>
+  <h4 class="modal-title">Payment!</h4>
+  <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body">
+  <div class="borrow-update">
+    <div class="row">
+      <div class="col-lg-12">
+        <form [formGroup]="formGroup" (ngSubmit)="onUpdateBorrow()" class="row g-3">
+          <div class="col-md-4 mb-3">
+            <label>Select Customer</label>
+            <select class="form-control" name="customer_id" aria-label="Default select example"
+              formControlName="customer_id">
+              <option *ngFor="let customer of customers" [value]="customer.id">{{
+                customer.name }}</option>
+            </select>
+          </div>
+
+          <div class="col-md-8 mb-3">
+            <label>Select Book</label>
+            <select class="form-control" name="book_id" aria-label="Default select example" formControlName="book_id">
+              <option *ngFor="let book of books" [value]="book.id">{{
+                book.title }}</option>
+            </select>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <label>Select Operator</label>
+            <select class="form-control" name="operator_id" aria-label="Default select example"
+              formControlName="operator_id">
+              <option *ngFor="let operator of operators" [value]="operator.id">{{
+                operator.name }}</option>
+            </select>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <label for="borrow_date" class="form-label">Borrow Date</label>
+            <input type="date" name="borrow_date" class="form-control" placeholder="Borrow Date"
+              formControlName="borrow_date">
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <label for="return_date" class="form-label">Return Date</label>
+            <input type="date" name="return_date" class="form-control" placeholder="Return Date"
+              formControlName="return_date">
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <label for="overdue" class="form-label">Overdue</label>
+            <input type="text" name="overdue" class="form-control" placeholder="Overdue" formControlName="overdue">
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <label for="charge" class="form-label">Charge</label>
+            <input type="text" name="charge" class="form-control" placeholder="Charge" formControlName="charge">
+          </div>
+        </form>
+
+        <p>Do you want to pay this transaction?</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Cancel</button>
+  <button type="button" class="btn btn-success" (click)="activeModal.close('Close click')">Yes</button>
+</div>
