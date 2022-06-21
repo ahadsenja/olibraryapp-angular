@@ -12,6 +12,7 @@ export class AuthorListComponent implements OnInit {
 
   authors: Author[] = [];
   filterText: string = '';
+  pageOfItems: Array<any>;
 
   constructor(
     private authorService: AuthorService,
@@ -39,6 +40,8 @@ export class AuthorListComponent implements OnInit {
     });
   }
 
-  onSearchValueChanges(inputElement: HTMLInputElement) { }
+  onChangePage(pageOfItems: Array<any>) {
+    this.pageOfItems = pageOfItems;
+  }
 
 }
