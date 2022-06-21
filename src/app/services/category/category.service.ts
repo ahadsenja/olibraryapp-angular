@@ -37,4 +37,8 @@ export class CategoryService {
     return this.http.get<Category[]>(`${Api.CATEGORIES_URL}/${id}`);
   }
 
+  search(searchText: string) {
+    return this.http.get<Category[]>(`${Api.CATEGORIES_URL}/${searchText}`);
+  }
+
 }
