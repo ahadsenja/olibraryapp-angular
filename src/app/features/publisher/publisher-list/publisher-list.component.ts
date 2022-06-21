@@ -16,8 +16,8 @@ export class PublisherListComponent implements OnInit {
   icons = { cilSearch }
 
   publishers: Publihser[] = [];
-
   filterText: string = '';
+  pageOfItems: Array<any>;
 
   constructor(
     private publisherService: PublihserService,
@@ -43,6 +43,10 @@ export class PublisherListComponent implements OnInit {
       this.publishers = this.publishers.filter(id => id !== publisher);
       alert('Data successfully deleted');
     })
+  }
+
+  onChangePage(pageOfItems: Array<any>) {
+    this.pageOfItems = pageOfItems;
   }
 
 }
