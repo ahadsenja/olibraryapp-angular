@@ -13,7 +13,7 @@
 
             <form action="" class="search">
               <i class="fa fa-search"></i>
-              <input type="search" class="form-control" placeholder="Search">
+              <input type="search" name="filterText" class="form-control" placeholder="Search" [(ngModel)]="filterText">
             </form>
           </div>
 
@@ -30,7 +30,7 @@
             </thead>
 
             <tbody>
-              <tr *ngFor="let customer of customers">
+              <tr *ngFor="let customer of customers | filter: filterText">
                 <td>{{ customer.id }}</td>
                 <td>{{ customer.name }}</td>
                 <td>{{ customer.email }}</td>

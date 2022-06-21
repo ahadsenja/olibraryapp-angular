@@ -13,6 +13,8 @@ export class CustomerListComponent implements OnInit {
 
   customers: Customer[] = [];
 
+  filterText: string = '';
+
   constructor(
     private customerService: CustomerService,
     private router: Router
