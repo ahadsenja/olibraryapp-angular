@@ -12,8 +12,8 @@ import { Borrow } from '../../../shared/models/borrow/borrow';
 export class BorrowListComponent implements OnInit {
 
   borrows: Borrow[] = [];
-
   filterText: string = '';
+  pageOfItems: Array<any>;
 
   constructor(
     private borrowService: BorrowService,
@@ -45,6 +45,10 @@ export class BorrowListComponent implements OnInit {
 
   onClickDetails(id: number) {
     this.router.navigate(['/transaction-details/transaction-details', id]);
+  }
+
+  onChangePage(pageOfItems: Array<any>) {
+    this.pageOfItems = pageOfItems;
   }
 
 }
