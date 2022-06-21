@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { CategoryService } from '../../../services/category/category.service';
 import { Category } from '../../../shared/models/category/category';
 
@@ -11,6 +12,8 @@ import { Category } from '../../../shared/models/category/category';
 export class CategoryListComponent implements OnInit {
 
   categories: Category[] = [];
+
+  filterText: string = '';
 
   constructor(
     private categoryService: CategoryService,
@@ -37,5 +40,4 @@ export class CategoryListComponent implements OnInit {
       alert('WARNING! \n The data you choose will be deleted');
     });
   }
-
 }

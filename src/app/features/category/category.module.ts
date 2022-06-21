@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { CategoryRoutingModule } from './category-routing.module';
+import { NgModuleModule } from '../../modules/ng-module/ng-module.module';
 
 import { CategoryListComponent } from './category-list/category-list.component';
 import { CategoryCreateComponent } from './category-create/category-create.component';
@@ -18,7 +19,9 @@ import { CategoryUpdateComponent } from './category-update/category-update.compo
   imports: [
     CommonModule,
     CategoryRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgModuleModule,
+    FormsModule,
   ]
 })
 export class CategoryModule { }
