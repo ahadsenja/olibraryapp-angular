@@ -12,8 +12,8 @@ import { Customer } from '../../../shared/models/customer/customer';
 export class CustomerListComponent implements OnInit {
 
   customers: Customer[] = [];
-
   filterText: string = '';
+  pageOfItems: Array<any>;
 
   constructor(
     private customerService: CustomerService,
@@ -43,6 +43,10 @@ export class CustomerListComponent implements OnInit {
 
   onClickDetails(id: number) {
     this.router.navigate(['/transaction-details/transaction-details', id]);
+  }
+
+  onChangePage(pageOfItems: Array<any>) {
+    this.pageOfItems = pageOfItems;
   }
 
 }
