@@ -13,7 +13,7 @@
 
             <form action="" class="search">
               <i class="fa fa-search"></i>
-              <input type="search" class="form-control" placeholder="Search">
+              <input type="search" name="filterText" class="form-control" placeholder="Search" [(ngModel)]="filterText">
             </form>
           </div>
 
@@ -28,7 +28,7 @@
             </thead>
 
             <tbody>
-              <tr *ngFor="let genre of genres">
+              <tr *ngFor="let genre of genres | filter: filterText">
                 <td>{{ genre.id }}</td>
                 <td>{{ genre.name }}</td>
                 <td>{{ genre.description }}</td>

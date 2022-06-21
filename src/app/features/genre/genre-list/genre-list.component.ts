@@ -11,6 +11,8 @@ import { Genre } from '../../../shared/models/genre/genre';
 export class GenreListComponent implements OnInit {
 
   genres: Genre[] = [];
+  filterText: string = ''
+
 
   constructor(
     private genreService: GenreService,
@@ -36,6 +38,17 @@ export class GenreListComponent implements OnInit {
       this.genres = this.genres.filter(id => id !== genre);
       alert('Warning, the data you choose will be deleted!');
     });
+  }
+
+  filterData(filterBy: string): Genre[] {
+    if (filterBy) {
+      filterBy = filterBy.toLocaleLowerCase();
+      return this.genres.filter((genre: Genre) => {
+        genre.name.toLocaleLowerCase().indexOf(filterBy) !== -1
+      });
+    } else {
+      return this.genres;
+    }
   }
 
 }
