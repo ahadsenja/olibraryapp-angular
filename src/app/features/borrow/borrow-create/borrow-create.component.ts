@@ -85,7 +85,8 @@ export class BorrowCreateComponent implements OnInit {
 
   getBooks() {
     this.bookService.getAll().subscribe(res => {
-      this.books = res.data;
+      this.books = res[0].books;
+      console.log(this.books)
     });
   }
 

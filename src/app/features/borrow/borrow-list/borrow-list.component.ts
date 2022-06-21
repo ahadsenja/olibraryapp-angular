@@ -13,6 +13,8 @@ export class BorrowListComponent implements OnInit {
 
   borrows: Borrow[] = [];
 
+  filterText: string = '';
+
   constructor(
     private borrowService: BorrowService,
     private router: Router,
