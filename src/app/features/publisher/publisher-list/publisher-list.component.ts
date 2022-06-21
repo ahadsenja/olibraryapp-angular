@@ -17,6 +17,8 @@ export class PublisherListComponent implements OnInit {
 
   publishers: Publihser[] = [];
 
+  filterText: string = '';
+
   constructor(
     private publisherService: PublihserService,
     private router: Router
