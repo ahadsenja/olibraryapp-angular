@@ -12,8 +12,8 @@ import { Bookreturn } from '../../../shared/models/bookreturn/bookreturn';
 export class BookreturnListComponent implements OnInit {
 
   bookreturns: Bookreturn[] = [];
-
   filterText: string = '';
+  pageOfItems: Array<any>;
 
   constructor(
     private bookReturnService: BookreturnService,
@@ -39,6 +39,10 @@ export class BookreturnListComponent implements OnInit {
       this.bookreturns = this.bookreturns.filter(id => id !== bookreturn);
       alert('WARNING!! \n The data you choose will be deleted!');
     });
+  }
+
+  onChangePage(pageOfItems: Array<any>) {
+    this.pageOfItems = pageOfItems;
   }
 
 }
