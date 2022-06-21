@@ -13,10 +13,7 @@ export class BookListComponent implements OnInit {
 
   books: Book[] = [];
 
-  searchTerm: string = '';
-  totalItems: number = 0;
-  totalPages: number = 0;
-  currentPage: number = 0;
+  filterText: string = '';
 
   constructor(
     private bookService: BookService,
@@ -30,10 +27,6 @@ export class BookListComponent implements OnInit {
   onGetBooks(): void {
     this.bookService.getAll().subscribe(data => {
       this.books = data[0].books;
-      console.log(this.books);
-      this.totalItems = data[0].totalItems;
-      this.totalPages = data[0].totalPages;
-      this.currentPage = data[0].currentPage;
     });
   }
 
