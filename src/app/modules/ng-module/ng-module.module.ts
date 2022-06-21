@@ -1,0 +1,21 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+import { SearchFilterPipe } from '../../components/search-filter/search-filter.pipe';
+
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
+@NgModule({
+  declarations: [
+    SearchFilterPipe
+  ],
+  imports: [
+    CommonModule,
+    Ng2SearchPipeModule
+  ],
+  exports: [
+    SearchFilterPipe,
+    Ng2SearchPipeModule
+  ],
+})
+export class NgModuleModule { }
