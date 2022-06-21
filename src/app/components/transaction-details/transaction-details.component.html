@@ -65,7 +65,9 @@
                     <td>{{bbook.overdue}}</td>
                     <td>{{bbook.charge}}</td>
                     <td>
-                      <a href="#" class="btn btn-success btn-sm">Pay</a>
+                      <!-- <button id="paid-btn" class="btn btn-success btn-sm" (click)="onChangePaidStatus(bbook.id)"
+                        [disabled]="paid">Pay</button> -->
+                      <button id="paid-btn" class="btn btn-success btn-sm" (click)="openModal(bbook.id)">Pay</button>
                     </td>
                   </tr>
                 </tbody>
