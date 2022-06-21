@@ -13,6 +13,8 @@ export class OperatorListComponent implements OnInit {
 
   operators: Operator[] = [];
 
+  filterText: string = '';
+
   constructor(
     private operatorService: OperatorService,
     private router: Router
