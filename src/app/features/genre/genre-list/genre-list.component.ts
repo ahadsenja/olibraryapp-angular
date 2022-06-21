@@ -12,7 +12,7 @@ export class GenreListComponent implements OnInit {
 
   genres: Genre[] = [];
   filterText: string = ''
-
+  pageOfItems: Array<any>;
 
   constructor(
     private genreService: GenreService,
@@ -49,6 +49,10 @@ export class GenreListComponent implements OnInit {
     } else {
       return this.genres;
     }
+  }
+
+  onChangePage(pageOfItems: Array<any>) {
+    this.pageOfItems = pageOfItems;
   }
 
 }
