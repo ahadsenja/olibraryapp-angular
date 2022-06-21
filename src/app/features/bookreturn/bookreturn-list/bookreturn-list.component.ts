@@ -13,6 +13,8 @@ export class BookreturnListComponent implements OnInit {
 
   bookreturns: Bookreturn[] = [];
 
+  filterText: string = '';
+
   constructor(
     private bookReturnService: BookreturnService,
     private router: Router
